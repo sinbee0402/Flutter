@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/linux,androidstudio,flutter,dart,gitbook
-# Edit at https://www.toptal.com/developers/gitignore?templates=linux,androidstudio,flutter,dart,gitbook
+# Created by https://www.toptal.com/developers/gitignore/api/windows,androidstudio,flutter,dart,git
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows,androidstudio,flutter,dart,git
 
 ### Dart ###
 # See https://www.dartlang.org/guides/libraries/private-files
@@ -93,38 +93,46 @@ lib/generated_plugin_registrant.dart
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 
-### GitBook ###
-# Node rules:
-## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
+### Git ###
+# Created by git for backups. To disable backups in Git:
+# $ git config --global mergetool.keepBackup false
+*.orig
 
-## Dependency directory
-## Commenting this out is preferred by some people, see
-## https://docs.npmjs.com/misc/faq#should-i-check-my-node_modules-folder-into-git
-node_modules
+# Created by git when using merge tools for conflicts
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
 
-# Book build output
-_book
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
 
-# eBook build output
-*.epub
-*.mobi
-*.pdf
+# Dump file
+*.stackdump
 
-### Linux ###
-*~
+# Folder config file
+[Dd]esktop.ini
 
-# temporary files which can be created if a process still has a handle open of a deleted file
-.fuse_hidden*
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-# KDE directory preferences
-.directory
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
 
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
-
-# .nfs files are created when an open file is removed but is still being accessed
-.nfs*
+# Windows shortcuts
+*.lnk
 
 ### AndroidStudio ###
 # Covers files to be ignored for android development using Android Studio.
@@ -170,6 +178,7 @@ proguard/
 captures/
 .navigation/
 *.ipr
+*~
 *.swp
 
 # Keystore files
@@ -256,4 +265,4 @@ fabric.properties
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-# End of https://www.toptal.com/developers/gitignore/api/linux,androidstudio,flutter,dart,gitbook
+# End of https://www.toptal.com/developers/gitignore/api/windows,androidstudio,flutter,dart,git
