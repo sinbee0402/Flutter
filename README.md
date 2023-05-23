@@ -1,4 +1,5 @@
-# Flutter
-플러터를 공부하면서 만든 Repository. 자세한 코드는 각각의 branch를 확인해주세요.
-### [keywordApp](https://github.com/sinbee0402/Flutter/tree/keywordApp)
-### [SeSAC](https://github.com/sinbee0402/Flutter/tree/SeSAC)
+# SeSAC
+
+SeSAC 수료 과정에서 풀었던 문제들입니다. <br>
+여러가지 개념을 배우면서 풀었던 문제로 설명은 다음과 같습니다.
+- Cleric : 클래스(Class)와 인스턴스(Instance)를 활용해 푼 문제입니다.
