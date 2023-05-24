@@ -3,21 +3,20 @@ import 'dart:math';
 //05.23.과제
 
 class Cleric {
+  static const int maxHp = 50;
+  static const int maxMp = 10;
+
   String name;
-  int hp = 50;
-  int mp = 10;
-  final int maxHp;
-  final int maxMp;
+  int hp;
+  int mp;
 
   // HP와 최대 HP는 정수로 초기치 50
   // MP와 최대 MP는 정수로 초기치 10
 
   Cleric(
     this.name, {
-    this.hp = 50,
-    this.mp = 10,
-    this.maxHp = 50,
-    this.maxMp = 10,
+    this.hp = maxHp,
+    this.mp = maxMp,
   });
 
   void selfAid() {
@@ -33,11 +32,9 @@ class Cleric {
   }
 
   int pray(int sec) {
-    int recoveryMp; //회복된 mp 양
-    int afterMp; //회복후 mp 양
+    int recoveryMp = sec + Random().nextInt(3); //회복된 mp 양 = sec+(0~2);
+    final int afterMp = mp + recoveryMp; //회복후 mp 양
 
-    recoveryMp = sec + Random().nextInt(3); //회복된 mp 양 = sec+(0~2)
-    afterMp = mp + recoveryMp; // mp 회복
     // mp, 회복된 mp양, 회복후 mp양
     print('mp: $mp, recoveryMp: $recoveryMp, afterMp: $afterMp');
 
