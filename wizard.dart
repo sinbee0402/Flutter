@@ -6,22 +6,20 @@ class Wizard {
   String _name; // 이름
   int _hp; // hp
   int _mp; // mp
-  Wand _wand; // 지팡이
+  Wand wand; // 지팡이
 
   String get name => _name;
   int get hp => _hp;
   int get mp => _mp;
-  Wand get wand => _wand;
 
   Wizard(
       {required String name,
       required int hp,
       required int mp,
-      required Wand wand})
+      required this.wand})
       : _name = name,
         _hp = hp,
-        _mp = mp,
-        _wand = wand;
+        _mp = mp;
 
   // 10-2, 1번
   set name(String value) {
@@ -44,11 +42,6 @@ class Wizard {
       throw Exception('mp 값이 0 미만입니다!');
     }
     _mp = value;
-  }
-
-  // 10-2, 3번
-  set wand(Wand value) {
-    _wand = value;
   }
 }
 
@@ -80,4 +73,5 @@ void main() {
   print(test6.hp);
 
   // 3번. Wizard의 wand는 Non-nullable이기 때문에 null로 설정하면 error //
+  // wand의 getter, setter를 삭제함에 따라 3번 테스트가 사라짐.
 }
