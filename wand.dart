@@ -15,8 +15,6 @@ class Wand {
   set name(String value) {
     if (value.length < 3) {
       throw Exception('Wand의 name 값은 3문자 이상어이야 합니다!');
-    } else if (value == null) {
-      throw Exception('name 값이 null 입니다!');
     }
     _name = value;
   }
