@@ -25,12 +25,12 @@ void main() {
   }
 
   // 2-3
-  final personList = <String, int>{};
+  final personMap = <String, int>{};
 
-  personList[hong.name] = 20;
-  personList[han.name] = 25;
+  personMap[hong.name] = 20;
+  personMap[han.name] = 25;
 
-  personList.forEach((key, value) {
+  personMap.forEach((key, value) {
     print('$key의 나이는 $value살');
   });
 }
