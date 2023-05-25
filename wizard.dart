@@ -27,19 +27,14 @@ class Wizard {
   set name(String value) {
     if (value.length < 3) {
       throw Exception('Wizard의 name 값은 3문자 이상어이야 합니다!');
-    } else if (value == null) {
-      throw Exception('name 값이 null 입니다!');
-    } else {
-      _name = value;
     }
+    _name = value;
   }
 
   // 10-2, 5번
   set hp(int value) {
     if (value < 0) {
       _hp = 0;
-    } else if (value == null) {
-      throw Exception('hp 값이 null 입니다!');
     }
   }
 
@@ -47,17 +42,12 @@ class Wizard {
   set mp(int value) {
     if (value < 0) {
       throw Exception('mp 값이 0 미만입니다!');
-    } else if (value == null) {
-      throw Exception('mp 값이 null 입니다!');
     }
     _mp = value;
   }
 
   // 10-2, 3번
   set wand(Wand value) {
-    if (value == null) {
-      throw Exception('wand 값이 null 입니다!');
-    }
     _wand = value;
   }
 }
