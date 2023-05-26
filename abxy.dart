@@ -56,4 +56,13 @@ void main() {
   y2.a();
   // y1.a() : Y타입의 A메서드만 호출
   // y2.a() : Y타입의 B메서드만 호출 -> b메서드도 된다.
+  
+  // 13-3
+  final A a = A();
+  final B b = B();
+  List<Y> abList = [a, b];
+
+  for (final i in abList) {
+    i.b();
+  }
 }
