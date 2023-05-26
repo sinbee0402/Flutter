@@ -4,7 +4,8 @@
 // 다 class : Patent class
 
 abstract class Asset {
-  String name;
+  final String name;
+  final int price;
 
-  Asset({required this.name});
+  Asset({required this.name, required this.price});
 }
