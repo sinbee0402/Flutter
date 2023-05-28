@@ -4,13 +4,12 @@ import 'tangible_asset.dart';
 // 12-1
 
 class Computer extends TangibleAsset {
-  String makerName;
+  final String makerName;
 
   Computer({
     required super.name,
     required super.price,
     required super.color,
     required this.makerName,
-    required super.weight,
   });
 }
