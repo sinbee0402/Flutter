@@ -1,3 +1,5 @@
+// 05.26.과제
+
 abstract interface class X {
   void a();
 }
