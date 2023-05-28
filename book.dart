@@ -4,13 +4,12 @@ import 'tangible_asset.dart';
 // 12-1
 
 class Book extends TangibleAsset {
-  String isbn;
+  final String isbn;
 
   Book({
     required super.name,
     required super.price,
     required super.color,
     required this.isbn,
-    required super.weight,
   });
 }
