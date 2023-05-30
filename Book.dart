@@ -1,3 +1,5 @@
+// 05.30.과제
+
 class Book {
   String title;
   DateTime publishDate = DateTime.now();
@@ -8,6 +10,19 @@ class Book {
     required this.comment,
     required this.publishDate,
   });
+
+  // List, Set, Map에서 자유롭게 사용하기
+  // Generate에서 자동완성 가능하다
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Book &&
+          runtimeType == other.runtimeType &&
+          title == other.title &&
+          publishDate == other.publishDate;
+
+  @override
+  int get hashCode => title.hashCode ^ publishDate.hashCode;
 
   // 3.
   // deep copy1 // 생성자
@@ -26,19 +41,6 @@ class Book {
       publishDate: publishDate ?? this.publishDate,
     );
   }
-
-  // List, Set, Map에서 자유롭게 사용하기
-  // Generate에서 자동완성 가능하다
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is Book &&
-          runtimeType == other.runtimeType &&
-          title == other.title &&
-          publishDate == other.publishDate;
-
-  @override
-  int get hashCode => title.hashCode ^ publishDate.hashCode;
 
   @override
   String toString() {
@@ -103,14 +105,14 @@ void main() {
   // List
   books1.sort((a, b) => a.publishDate.compareTo(b.publishDate));
   for (var book in books1) {
-    print('$book\n');
+    '$book\n'.toString();
   }
 
   // Set
   final listSet = books2.toList()
     ..sort((a, b) => a.publishDate.compareTo(b.publishDate));
   listSet.forEach((book) {
-    print('${book.title} - ${book.publishDate}');
+    book.toString();
   });
   print('\n');
 
@@ -118,6 +120,6 @@ void main() {
   final listMap = books3.keys.toList()
     ..sort((a, b) => a.publishDate.compareTo(b.publishDate));
   listMap.forEach((book) {
-    print('${book.title} : ${book.publishDate}');
+    book.toString();
   });
 }
