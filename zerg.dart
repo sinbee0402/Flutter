@@ -19,13 +19,7 @@ class Building implements Zerg {
   }
 }
 
-class Unit extends Medic implements Zerg {
-  @override
-  void heal() {
-    // Medic 치료
-    super.heal();
-  }
-
+class ZergBionic implements Zerg {
   @override
   void autoRecovery() {
     // 자동 회복
