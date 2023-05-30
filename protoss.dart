@@ -24,4 +24,9 @@ class Dragoon implements Protoss, Mechanic {
   void shield() {
     // 방어막
   }
+
+  @override
+  void unitDesignation(int unit) {
+    // 부대 지정
+  }
 }
