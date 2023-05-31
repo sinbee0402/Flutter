@@ -103,9 +103,12 @@ void main() {
 
   // 2. 정렬하기
   // List
+  // List deep copy
+  // final otherBook = [];
   books1.sort((a, b) => a.publishDate.compareTo(b.publishDate));
   for (var book in books1) {
     '$book\n'.toString();
+    // otherBook.add(book.copyWith());
   }
 
   // Set
