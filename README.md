@@ -8,4 +8,5 @@ SeSAC 수료 과정에서 풀었던 문제들입니다. <br>
 - [Hero](https://github.com/sinbee0402/Flutter/blob/SeSAC/hero.dart) / [Slime](https://github.com/sinbee0402/Flutter/blob/SeSAC/slime.dart) / [PoisonSlime](https://github.com/sinbee0402/Flutter/blob/SeSAC/poison_slime.dart) : 상속(Inheritance)를 활용해 푼 문제입니다. 
 - [Book](https://github.com/sinbee0402/Flutter/blob/SeSAC/book.dart) / [Computer](https://github.com/sinbee0402/Flutter/blob/SeSAC/computer.dart) / [Asset](https://github.com/sinbee0402/Flutter/blob/SeSAC/asset.dart) / [Thing](https://github.com/sinbee0402/Flutter/blob/SeSAC/thing.dart) / [TangibleAsset](https://github.com/sinbee0402/Flutter/blob/SeSAC/tangible_asset.dart) : 추상 클래스(Abstract class)와 인터페이스(Interface)를 활용해 푼 문제입니다.
 - [Abxy](https://github.com/sinbee0402/Flutter/blob/SeSAC/abxy.dart) / [Terran](https://github.com/sinbee0402/Flutter/blob/SeSAC/terran.dart) / [Zerg](https://github.com/sinbee0402/Flutter/blob/SeSAC/zerg.dart) / [Protoss](https://github.com/sinbee0402/Flutter/blob/SeSAC/protoss.dart) : 다형성(Polymorphism)를 활용해 푼 문제입니다.
-- [Book](https://github.com/sinbee0402/Flutter/blob/SeSAC/Book.dart) : 앞에서 배웠던 개념들과 인스턴스 기본 조작을 활용해 푼 문제 입니다.
+- [Book](https://github.com/sinbee0402/Flutter/blob/SeSAC/Book.dart) : 앞에서 배웠던 개념들과 인스턴스 기본 조작을 활용해 푼 문제입니다.
+- [Word](https://github.com/sinbee0402/Flutter/blob/SeSAC/word.dart) : 정규식(Regular Expression)과 문자열 조작를 활용해 푼 문제입니다.
