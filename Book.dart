@@ -86,8 +86,8 @@ void main() {
     ): 'June',
   };
 
-  final Book book1 =
-      Book(title: 'bbb', comment: 'bbbbb', publishDate: DateTime(1973, 4, 26));
+  // final Book book1 =
+  //     Book(title: 'bbb', comment: 'bbbbb', publishDate: DateTime(1973, 4, 26));
 
   // 1.
   // List 동일 객체 test - true
@@ -122,4 +122,16 @@ void main() {
   listMap.forEach((book) {
     book.toString();
   });
+
+  Book book1 = Book(
+    title: 'a',
+    comment: 'b',
+    publishDate: DateTime(2020, 1, 2),
+  );
+
+  Book book2 = Book.clone(book1); // 복사
+  book2.title = 'b';
+
+  print(book1.title);
+  print(book2.title);
 }
