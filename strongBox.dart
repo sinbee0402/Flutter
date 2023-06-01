@@ -3,19 +3,48 @@
 // 2번.
 
 class StrongBox<E> {
-  E? _gold;
+  E? _asset; //좀더 추상적인 선언
   KeyType key;
-  int count = 0;
+  int _count = 0;
 
   StrongBox(this.key);
 
-  void put(E gold) {
-    _gold = gold;
+  void put(E asset) {
+    _asset = asset;
   }
 
   E? get() {
-    count += 1;
-    return _gold;
+    _count += 1;
+    switch (key) {
+      case KeyType.padlock:
+        if (_count >= 1024) {
+          return null;
+        } else {
+          print('key: $key\ncount: $_count');
+        }
+        break;
+      case KeyType.button:
+        if (_count >= 10000) {
+          return _asset;
+        } else {
+          print('key: $key\ncount: $_count');
+        }
+        break;
+      case KeyType.dial:
+        if (_count >= 30000) {
+          return _asset;
+        } else {
+          print('key: $key\ncount: $_count');
+        }
+        break;
+      case KeyType.finger:
+        if (_count >= 1000000) {
+          return _asset;
+        } else {
+          print('key: $key\ncount: $_count');
+        }
+        break;
+    }
   }
 }
 
@@ -34,36 +63,5 @@ void main() {
     box.get();
     // 1022일 때, 1023 값이 나오는 것을 확인.
     // 1023일 때, null 값을 리턴하는 것을 확인.
-  }
-
-  switch (box.key) {
-    case KeyType.padlock:
-      if (box.count >= 1024) {
-        return;
-      } else {
-        print('key: ${box.key}\ncount: ${box.count}');
-      }
-      break;
-    case KeyType.button:
-      if (box.count >= 10000) {
-        return;
-      } else {
-        print('key: ${box.key}\ncount: ${box.count}');
-      }
-      break;
-    case KeyType.dial:
-      if (box.count >= 30000) {
-        return;
-      } else {
-        print('key: ${box.key}\ncount: ${box.count}');
-      }
-      break;
-    case KeyType.finger:
-      if (box.count >= 1000000) {
-        return;
-      } else {
-        print('key: ${box.key}\ncount: ${box.count}');
-      }
-      break;
   }
 }
