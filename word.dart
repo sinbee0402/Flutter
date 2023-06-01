@@ -8,11 +8,13 @@ class Word {
       word.substring(i, i + 1).contains(RegExp(r'[aeiouAEIOU]'));
 
   bool isConsonant(int i) {
-    if (word.substring(i, i + 1).contains(RegExp(r'[aeiouAEIOU]'))) {
-      return false;
-    } else {
-      return true;
-    }
+    // if (word.substring(i, i + 1).contains(RegExp(r'[aeiouAEIOU]'))) {
+    //   return false;
+    // } else {
+    //   return true;
+    // }
+    // return !isVowel(i);
+    return !word.substring(i, i+1).contains(RegExp(r'[aeiouAEIOU]'));
   }
 }
 
