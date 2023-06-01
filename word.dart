@@ -13,8 +13,9 @@ class Word {
     // } else {
     //   return true;
     // }
-    // return !isVowel(i);
-    return !word.substring(i, i + 1).contains(RegExp(r'[aeiouAEIOU]'));
+    return !isVowel(i);
+    // return !word.substring(i, i + 1).contains(RegExp(r'[aeiouAEIOU]'));
+    // return word.substring(i, i + 1).contains(RegExp(r'[^aeiouAEIOU]'));
   }
 }
 
