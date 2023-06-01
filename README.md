@@ -11,3 +11,4 @@ SeSAC 수료 과정에서 풀었던 문제들입니다. <br>
 - [Book](https://github.com/sinbee0402/Flutter/blob/SeSAC/Book.dart) : 앞에서 배웠던 개념들과 인스턴스 기본 조작을 활용해 푼 문제입니다.
 - [Word](https://github.com/sinbee0402/Flutter/blob/SeSAC/word.dart) : 정규식(Regular Expression)과 문자열 조작를 활용해 푼 문제입니다.
 - [StrongBox](https://github.com/sinbee0402/Flutter/blob/SeSAC/strongBox.dart) : 제네릭(Generic)과 열거형(Enum)을 활용해 푼 문제입니다.
+- [Exception](https://github.com/sinbee0402/Flutter/blob/SeSAC/exception.dart) : 예외(Exception)을 활용해 푼 문제입니다.
