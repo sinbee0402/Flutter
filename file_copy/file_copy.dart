@@ -4,8 +4,8 @@ import 'dart:io';
 // 파일 복사
 
 void copy(String source, String target) {
-  final file = File('lib/homework/file_copy/memo.txt');
-  final copyFile = File('lib/homework/file_copy/copy.txt');
+  final file = File('lib/homework/file_copy/$source');
+  final copyFile = File('lib/homework/file_copy/$target');
 
   copyFile.writeAsStringSync(file.readAsStringSync());
   // copyFile.writeAsStringSync(file.readAsStringSync(), mode: FileMode.append);
