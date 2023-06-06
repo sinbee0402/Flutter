@@ -14,3 +14,4 @@ SeSAC 수료 과정에서 풀었던 문제들입니다. <br>
 - [Exception](https://github.com/sinbee0402/Flutter/blob/SeSAC/exception.dart) : 예외(Exception)을 활용해 푼 문제입니다.
 - [File_Copy](https://github.com/sinbee0402/Flutter/tree/SeSAC/file_copy) : 파일 조작을 활용해 푼 문제입니다.
 - [Company](https://github.com/sinbee0402/Flutter/tree/SeSAC/company) : Json 변환과 파일조작을 활용해 푼 문제입니다.
+- [Debug](https://github.com/sinbee0402/Flutter/tree/SeSAC/debug) : 디버그(Debug)와 Json 변환을 활용해 푼 문제입니다.
