@@ -1,5 +1,8 @@
 import 'package:intl/intl.dart';
 
+// 06.02.과제
+// 2번.
+
 class YukymController {
   // DateTime.parse(_userData.value!.selectDate)
   //String nowDate = DateFormat('yyyy-mm-dd').format(DateTime.now());
