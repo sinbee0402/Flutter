@@ -86,7 +86,8 @@ void main() {
   // list.clear();
   // transactions.map((e) => list.add(e.value));
   // final maxValue = list.reduce((e, v) => max(e, v)); // 이거 왜 안되는거지..
-  //print(list.reduce((e, v) => e > v ? e : v));  // 왜 자꾸 안된대!
+  //print(list.reduce((e, v) => e > v ? e : v));  // 얘도 안된다
+  // final maxValue = list.reduce((e, v) => max); // 근데 이건 되네. 뭔차이야..?
   final maxValue = transactions.fold(
       0,
       (previousValue, transaction) => previousValue > transaction.value
