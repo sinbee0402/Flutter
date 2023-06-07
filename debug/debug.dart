@@ -1,6 +1,7 @@
 import 'dart:convert';
-
 import 'list_data.dart';
+
+// 06.02.과제
 
 void main() {
   final String json = '''{
@@ -25,16 +26,20 @@ void main() {
   print(serialization);
 
   print('역직렬화');
-  for (CollectionChartDataList collectionChartDataList
-      in listData.collectionChartDataList) {
-    print('Collection Name: ${collectionChartDataList.collectionName}');
-    if (collectionChartDataList.collectionSalePrice != null) {
-      collectionChartDataList.collectionSalePrice?.forEach((e) {
-        print('Price: ${e.price}');
-        print('DateTime: ${e.cvtDatetime}');
-      });
-    } else {
-      print('SalePrice: null');
+  print('ListData:');
+  print('collectionChartDataList:');
+  if (listData.collectionChartDataList != null) {
+    for (var chartData in listData.collectionChartDataList!) {
+      print('  collectionName: ${chartData.collectionName}');
+      print('  collectionSalePrice:');
+      if (chartData.collectionSalePrice != null) {
+        for (var salePrice in chartData.collectionSalePrice!) {
+          print('    price: ${salePrice.price}');
+          print('    cvtDatetime: ${salePrice.cvtDatetime}');
+        }
+      } else {
+        print('    null');
+      }
     }
   }
 }
