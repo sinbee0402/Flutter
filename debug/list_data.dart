@@ -8,68 +8,76 @@
 // 답안2) 이 데이터로 받을 수 있게 코드 수정하기
 
 class ListData {
-  List<CollectionChartDataList> collectionChartDataList;
-
-  ListData(
+  ListData({
     this.collectionChartDataList,
-  );
+  });
 
-  ListData.fromJson(dynamic json)
-      : collectionChartDataList = List.from(json['collectionChartDataList'])
-            .map((e) => CollectionChartDataList.fromJson(e))
-            .toList();
+  ListData.fromJson(dynamic json) {
+    if (json['collectionChartDataList'] != null) {
+      collectionChartDataList = [];
+      json['collectionChartDataList'].forEach((v) {
+        collectionChartDataList?.add(CollectionChartDataList.fromJson(v));
+      });
+    }
+  }
+  List<CollectionChartDataList>? collectionChartDataList;
 
-  Map<String, dynamic> toJson() => {
-        'collectionChartDataList':
-            collectionChartDataList.map((e) => e.toJson()).toList()
-      };
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    if (collectionChartDataList != null) {
+      map['collectionChartDataList'] =
+          collectionChartDataList?.map((v) => v.toJson()).toList();
+    }
+    return map;
+  }
 }
 
 class CollectionChartDataList {
-  String collectionName;
-  List<CollectionSalePrice>? collectionSalePrice;
-
-  CollectionChartDataList(
+  CollectionChartDataList({
     this.collectionName,
     this.collectionSalePrice,
-  );
+  });
 
-  // error 발생.. 선생님 도와주세요ㅠㅠ
-  CollectionChartDataList.fromJson(Map<String, dynamic> json) {
+  CollectionChartDataList.fromJson(dynamic json) {
     collectionName = json['collectionName'];
     if (json['collectionSalePrice'] != null) {
-      collectionSalePrice = <CollectionSalePrice>[];
-      json['collectionSalePrice'].forEach((e) {
-        collectionSalePrice.add(CollectionSalePrice.fromJson(e));
+      collectionSalePrice = [];
+      json['collectionSalePrice'].forEach((v) {
+        collectionSalePrice?.add(CollectionSalePrice.fromJson(v));
       });
-    } else {
-      collectionSalePrice = null;
     }
   }
+  String? collectionName;
+  List<CollectionSalePrice>? collectionSalePrice;
 
-  // null 값밖에 안들어가는 코드
-  // CollectionChartDataList.fromJson(Map<String, dynamic> json)
-  //     : collectionName = json['collectionName'],
-  //       collectionSalePrice = null;
-
-  Map<String, dynamic> toJson() => {
-        'collectionName': collectionName,
-        'collectionSalePrice': collectionSalePrice,
-      };
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['collectionName'] = collectionName;
+    if (collectionSalePrice != null) {
+      map['collectionSalePrice'] =
+          collectionSalePrice?.map((v) => v.toJson()).toList();
+    }
+    return map;
+  }
 }
 
 class CollectionSalePrice {
-  double price;
-  String cvtDatetime;
+  CollectionSalePrice({
+    this.price,
+    this.cvtDatetime,
+  });
 
-  CollectionSalePrice(this.price, this.cvtDatetime);
+  CollectionSalePrice.fromJson(dynamic json) {
+    price = json['price'];
+    cvtDatetime = json['cvtDatetime'];
+  }
+  num? price;
+  String? cvtDatetime;
 
-  CollectionSalePrice.fromJson(Map<String, dynamic> json)
-      : price = json['price'],
-        cvtDatetime = json['cvtDatetime'];
-
-  Map<String, dynamic> toJson() => {
-        'price': price,
-        'cvtDatetime': cvtDatetime,
-      };
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['price'] = price;
+    map['cvtDatetime'] = cvtDatetime;
+    return map;
+  }
 }
