@@ -12,11 +12,13 @@ void main() async {
 }
 
 Future<String> findWord(String path) async {
-  final word = await File('lib/homework/Asynchronous/$path').readAsString();
-  final copyWord = File('lib/homework/Asynchronous/sample_copy.csv');
-  if (word.contains('한석봉')) {
-    copyWord.writeAsString(word.replaceAll('한', '김'));
-  } else if (path != null) {
+  try {
+    final word = await File('lib/homework/Asynchronous/$path').readAsString();
+    final copyWord = File('lib/homework/Asynchronous/sample_copy.csv');
+    if (word.contains('한석봉')) {
+      copyWord.writeAsString(word.replaceAll('한', '김'));
+    }
+  } catch (e) {
     await Future.error(Exception('파일을 찾을 수 없습니다.'));
   }
   return '에러 통과';
