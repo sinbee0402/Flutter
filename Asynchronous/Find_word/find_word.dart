@@ -19,7 +19,7 @@ Future<String> findWord(String path) async {
       copyWord.writeAsString(word.replaceAll('한', '김'));
     }
   } catch (e) {
-    await Future.error(Exception('파일을 찾을 수 없습니다.'));
+    await Future.error(Exception('$e: 파일을 찾을 수 없습니다.'));
   }
   return '에러 통과';
 }
