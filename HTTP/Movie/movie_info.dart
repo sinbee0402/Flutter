@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:dart_basic/homework/HTTP/Movie/model/MovieDetail.dart';
+import 'package:dart_basic/homework/HTTP/Movie/model/movie_detail.dart';
 import 'package:dart_basic/homework/HTTP/Movie/model/movie.dart';
 import 'package:http/http.dart' as http;
 
@@ -18,7 +18,8 @@ void main() async {
   });
 
   // 2번. 영화 상세 정보
-  final MovieDetail info = MovieDetail.fromJson(await getDetailInfo(569094));
+  final info = await getDetailInfo(569094);
+  final MovieDetail movieDetail = MovieDetail.fromJson(info);
   print(info);
 }
 
