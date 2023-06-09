@@ -27,9 +27,9 @@ void main() async {
   await downloadSequence();
   await downloadParallel();
 
-  // 6번. test 안된다.
+  // 6번. 
   await saveFile(
-    await downloadImage('https://alimipro.com/alkjsdhlkfjahskdjfhla.ico'),
+    await downloadImage('https://asdfasdfasdf/favicon.ico2'),
     'icon.ico',
   );
 }
