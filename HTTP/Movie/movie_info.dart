@@ -18,10 +18,8 @@ void main() async {
   });
 
   // 2번. 영화 상세 정보
-  final info = await getDetailInfo(569094);
-  info.forEach((key, value) {
-    print('$key: $value');
-  });
+  final info = MovieDetail.fromJson(await getDetailInfo(569094));
+  print(info);
 }
 
 // 1번. 영화 정보
