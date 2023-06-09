@@ -18,7 +18,7 @@ void main() async {
   });
 
   // 2번. 영화 상세 정보
-  final info = MovieDetail.fromJson(await getDetailInfo(569094));
+  final MovieDetail info = MovieDetail.fromJson(await getDetailInfo(569094));
   print(info);
 }
 
