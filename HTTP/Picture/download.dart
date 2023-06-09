@@ -7,8 +7,8 @@ import 'package:http/http.dart' as http;
 
 void main() async {
   // 4번.
-  // print('다운로드 시작');
-  // Stopwatch stopwatch = Stopwatch()..start();
+  print('다운로드 시작');
+  Stopwatch stopwatch = Stopwatch()..start();
 
   // 3번.
   final file = await saveFile(
@@ -16,16 +16,16 @@ void main() async {
     'icon.ico',
   );
 
-  // // 4번.
-  // stopwatch.stop();
-  // print('다운로드 끝');
-  // print('===============');
-  // print('소요 시간 : ${stopwatch.elapsed}');
-  // print('용량 : ${await file.length()}bytes');
-  //
-  // // 5번.
-  // await downloadSequence();
-  // await downloadParallel();
+  // 4번.
+  stopwatch.stop();
+  print('다운로드 끝');
+  print('===============');
+  print('소요 시간 : ${stopwatch.elapsed}');
+  print('용량 : ${await file.length()}bytes');
+  
+  // 5번.
+  await downloadSequence();
+  await downloadParallel();
 
   // 6번. test 안된다.
   await saveFile(
