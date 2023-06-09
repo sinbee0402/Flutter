@@ -38,7 +38,7 @@ Future<List<Movie>> getMovieInfo() async {
 }
 
 // 2번. 영화 상세 정보
-// 모델에 담지 않았다.. 내일의 누군가 도와줘요 스피드웨건!
+// 모델에 담지 않았다
 Future<Map<String, dynamic>> getDetailInfo(int movieId) async {
   final response = await http.get(Uri.parse(
       'https://api.themoviedb.org/3/movie/$movieId?api_key=a64533e7ece6c72731da47c9c8bc691f&language=ko-KR&page=1'));
