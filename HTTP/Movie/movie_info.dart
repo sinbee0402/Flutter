@@ -18,7 +18,7 @@ void main() async {
   });
 
   // 2번. 영화 상세 정보
-  final info = await getDetailInfo(569094);
+  final info = await getMovieDetailInfo(569094);
   print(jsonEncode(info.toJson()));
 }
 
@@ -36,7 +36,7 @@ Future<List<Movie>> getMovieInfo() async {
 }
 
 // 2번. 영화 상세 정보
-Future<MovieDetail> getDetailInfo(int movieId) async {
+Future<MovieDetail> getMovieDetailInfo(int movieId) async {
   final response = await http.get(Uri.parse(
       'https://api.themoviedb.org/3/movie/$movieId?api_key=a64533e7ece6c72731da47c9c8bc691f&language=ko-KR&page=1'));
   final json = jsonDecode(response.body);
