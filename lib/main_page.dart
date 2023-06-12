@@ -58,6 +58,7 @@ class _MainPageState extends State<MainPage> {
   // dispose 코드를 작성해줘야 메모리 문제를 해결할 수 있다.
   @override
   void dispose() {
+    // =(대입) : 왼쪽 값에 오른쪽 값을 넣을 때 사용한다.
     number = 11; // 전역변수
     int i = 10; // 지역변수
     i = 11;
