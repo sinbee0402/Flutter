@@ -25,10 +25,16 @@ class MainPage extends StatefulWidget {
   State<MainPage> createState() => _MainPageState();
 }
 
+// Hot Reload : 상단의 번개 버튼, 바로바로 바뀌는 것을 확인할 수 있다.
+// build 메서드에 작성한 코드들은 바로바로 변경이 되고, 그 변경사항을 Hot Reload로 확인할 수 있다.
+// Hot Restart : 하단의 Run 탭의 Hot Reload 옆의 버튼,해당 클래스의 build 메서드 밖에 작성된 것들의 변경사항을 확인할 수 있다.
+// 해당 클래스 바깥의 변경사항이 반영이 안된다면 상단의 재생버튼으로 다시 Run을 해준다.
+// Hot Reload가 제일 빠르고, Run이 제일 느리다.
+
 class _MainPageState extends State<MainPage> {
   // 변수명은 소문자로 시작해야 한다.
   // count라는 변수에 값 0을 담음.
-  int number = 0;
+  int number = 10;
   // count -> number, MyHomePage -> MainPage, my_home_page -> main_page
   // 변수, 함수, 클래스 이름 한번에 변경하기
   // : Shift + F6 / 해당 변수, 함수, 클래스명 우클릭 Refactor -> Rename
