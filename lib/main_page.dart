@@ -115,6 +115,20 @@ class _MainPageState extends State<MainPage> {
               onPressed: () {},
               child: Text('OutlinedButton'),
             ),
+            TextField(
+              // TextField를 꾸민다.
+              decoration: InputDecoration(
+                labelText: '글자', // Hint Text
+                border: OutlineInputBorder(), // TextField의 외곽선
+              ),
+              // 글자를 입력할 수 있다.
+              // 영어 상태에서 입력, 한글 상태에서는 입력이 아예 안된다.
+              // 에뮬레이터 내부의 소프트키보드에서 언어를 바꿔서 사용하면 한글이 입력된다.
+              onChanged: (text) {
+                // onChanged를 사용하려면 매개변수 String을 줘야한다.
+                print(text);
+              },
+            ),
           ],
         ),
       ),
