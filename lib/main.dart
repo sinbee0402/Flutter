@@ -54,17 +54,44 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('홈'),
       ),
       body: Center(
-        child: Text(
-          '$count', // 변수의 값을 넣어서 표시
-          style: TextStyle(
-            color: Colors.red,
-            fontSize: 70,
-          ),
-          // Reformat Code : Ctrl + Alt + L / option + L
-          // 속성들이 많이 사용이 되는 경우에 사용한다.
-          // Reformat이 되는 경우는
-          // 마지막 속성에 ,(컴마)가 있는 경우 줄이 바뀌면서 정리가 되고,
-          // ,(컴마)가 없는 경우 한줄로 정리가 된다.
+        // Column 추가 : Alt + enter -> Wrap with Column
+        // 삭제하고싶은 위젯 : Alt + enter -> remove this widget 선택
+        child: Column(
+          // Column : 세로, 위에서 아래쪽으로 가는 형태
+          // Row : 가로, 왼쪽에서 오른쪽으로 가는 형태
+          // mainAxisAlignment
+          // : 메인 방향 정렬, center는 가운데 방향
+          // Column과 Row를 사용할 때, 위치를 맞추고 싶다면 사용해야한다.
+          // Center로 감싸도 중앙으로 오지 않는다.
+          // Center로 중앙으로 온것은 맞지만, 리스트의 형태로 위나 왼쪽에서부터(?) 시작하게 된다.
+          // 그래서 mainAxisAlignment로 Column이나 Row의 안쪽을 중앙으로 정렬하게 하는 것이다.
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              '숫자', // 변수의 값을 넣어서 표시
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 40,
+              ),
+              // Reformat Code : Ctrl + Alt + L / option + L
+              // 속성들이 많이 사용이 되는 경우에 사용한다.
+              // Reformat이 되는 경우는
+              // 마지막 속성에 ,(컴마)가 있는 경우 줄이 바뀌면서 정리가 되고,
+              // ,(컴마)가 없는 경우 한줄로 정리가 된다.
+            ),
+            Text(
+              '$count', // 변수의 값을 넣어서 표시
+              style: TextStyle(
+                color: Colors.red,
+                fontSize: 70,
+              ),
+              // Reformat Code : Ctrl + Alt + L / option + L
+              // 속성들이 많이 사용이 되는 경우에 사용한다.
+              // Reformat이 되는 경우는
+              // 마지막 속성에 ,(컴마)가 있는 경우 줄이 바뀌면서 정리가 되고,
+              // ,(컴마)가 없는 경우 한줄로 정리가 된다.
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
