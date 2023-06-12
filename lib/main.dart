@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
 }
 
 // stful : 새로운 stateful widget을 만드는 코드.
+//
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
@@ -38,6 +39,23 @@ class _MyHomePageState extends State<MyHomePage> {
     // return const Placeholder();
     // 화면의 빈 공간을 나타냄.
     // 둘의 차이는 X자 표시를 나타내느냐 아니냐의 차이이다.
-    return Container();
+
+    // 흰색 화면 만들기
+    // Scaffold : 앱을 만드는 기본이 되는 뼈대 위젯.
+    // 대부분의 경우 항상 사용한다.
+    return Scaffold(
+      // AppBar 만들기
+      appBar: AppBar(
+        // AppBar의 텍스트(타이틀)
+        // Text를 사용해서 문자를 작성할 때, 작은 따옴표가 기본이다.
+        title: Text('홈'),
+      ),
+      body: Center(
+        child: Text(
+          '0',
+          style: TextStyle(color: Colors.red, fontSize: 70),
+        ),
+      ),
+    );
   }
 }
