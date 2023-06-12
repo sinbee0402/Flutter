@@ -38,6 +38,16 @@ class _MainPageState extends State<MainPage> {
   // count -> number, MyHomePage -> MainPage, my_home_page -> main_page
   // 변수, 함수, 클래스 이름 한번에 변경하기
   // : Shift + F6 / 해당 변수, 함수, 클래스명 우클릭 Refactor -> Rename
+  String _text = '';
+  final _textController = TextEditingController();
+
+  // controller는 사용하고 나서 해제하는 코드를 작성해줘야한다.
+  // dispose 코드를 작성해줘야 메모리 문제를 해결할 수 있다.
+  @override
+  void dispose() {
+    _textController.dispose();
+    super.dispose();
+  }
 
   @override // 메서드와 함수도 소문자로 시작한다.
   Widget build(BuildContext context) {
@@ -135,6 +145,9 @@ class _MainPageState extends State<MainPage> {
                     flex: 3, // flex로 주변 위젯과의 크기 비율을 조절할 수 있다.
                     // flex를 설정하지 않으면 기본적으로 1:1 비율.
                     child: TextField(
+                      // onChanged와 onPressed에 _text를 사용해서 값을 주고 받거나, _
+                      // textController라는 변수를 controller에 사용해 TextField의 값을 얻을 수 있다.
+                      controller: _textController,
                       // TextField를 꾸민다.
                       decoration: InputDecoration(
                         labelText: '글자', // Hint Text
@@ -145,14 +158,18 @@ class _MainPageState extends State<MainPage> {
                       // 에뮬레이터 내부의 소프트키보드에서 언어를 바꿔서 사용하면 한글이 입력된다.
                       onChanged: (text) {
                         // onChanged를 사용하려면 매개변수 String을 줘야한다.
-                        print(text);
+                        _text = text;
+                        // print(text);
                       },
                     ),
                   ),
                   Expanded(
                     flex: 2,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        // TextField에 사용한 text를 얻을 수 있다.
+                        print(_textController.text);
+                      },
                       child: Text('login'),
                     ),
                   ),
