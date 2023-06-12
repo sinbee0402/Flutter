@@ -5,6 +5,12 @@ import 'package:flutter/material.dart';
 // 화면을 만들 때, 하나의 화면은 하나의 파일에만 만들 것.
 // 앱이 시작되는 부분을 제외하고, 나머지 화면 부분들은 별도의 파일로 작성하는 것이 좋다.
 // 파일을 나누는 이유는 나중에 수정할 때, 관리하기 용이하게 사용할 수 있기 때문이다.
+
+// CamelCase (낙타형) : 대문자와 띄어쓰기 없이.
+// snake_case (뱀형) : 소문자와 _(언더바)
+// 둘다 띄어쓰기가 없다.
+// class명은 CamelCase로, 파일명은 snake_case로 작성한다.
+// 암묵적인 룰이다.
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
@@ -13,10 +19,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  // 변수명은 소문자로 시작해야 한다.
   // count라는 변수에 값 0을 담음.
   int count = 0;
 
-  @override
+  @override // 메서드와 함수도 소문자로 시작한다.
   Widget build(BuildContext context) {
     // 화면에 X 표시
     // return const Placeholder();
