@@ -11,17 +11,20 @@ import 'package:flutter/material.dart';
 // 둘다 띄어쓰기가 없다.
 // class명은 CamelCase로, 파일명은 snake_case로 작성한다.
 // 암묵적인 룰이다.
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class MainPage extends StatefulWidget {
+  const MainPage({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MainPage> createState() => _MainPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MainPageState extends State<MainPage> {
   // 변수명은 소문자로 시작해야 한다.
   // count라는 변수에 값 0을 담음.
-  int count = 0;
+  int number = 0;
+  // count -> number, MyHomePage -> MainPage, my_home_page -> main_page
+  // 변수, 함수, 클래스 이름 한번에 변경하기
+  // : Shift + F6 / 해당 변수, 함수, 클래스명 우클릭 Refactor -> Rename
 
   @override // 메서드와 함수도 소문자로 시작한다.
   Widget build(BuildContext context) {
@@ -67,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
               // ,(컴마)가 없는 경우 한줄로 정리가 된다.
             ),
             Text(
-              '$count', // 변수의 값을 넣어서 표시
+              '$number', // 변수의 값을 넣어서 표시
               style: TextStyle(
                 color: Colors.red,
                 fontSize: 70,
@@ -111,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
           setState(() {
             // 클릭을 했을 시 증가하도록
             // 화면 그리기 / 화면 갱신
-            count++;
+            number++;
           });
           // 문장이 끝날 때마다 세미콜론을 써야한다.
           // 컴마가 쓰인 곳들은 한줄이다.
