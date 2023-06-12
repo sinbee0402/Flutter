@@ -70,6 +70,11 @@ class _MainPageState extends State<MainPage> {
           // 그래서 mainAxisAlignment로 Column이나 Row의 안쪽을 중앙으로 정렬하게 하는 것이다.
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Container(
+              color: Colors.red, //크기가 없으면 지정된 색상이 보이지 않는다.
+              width: 100,
+              height: 100,
+            ),
             Text(
               '숫자', // 변수의 값을 넣어서 표시
               style: TextStyle(
@@ -137,12 +142,23 @@ class _MainPageState extends State<MainPage> {
               height: 100, // 세로 길이
               fit: BoxFit.cover, // 꽉 채우기
             ),
-            // 가지고 있는 이미지 사용하기
-            Image.asset(
-              'assets/han.jpg',
-              width: 100,
-              height: 100,
-              fit: BoxFit.cover,
+            Container(
+              // Container의 크기는 지정된 크기가 없을 때, 자식(child) 위젯의 크기를 따른다.
+              // width: 120,
+              // height: 120,
+              // 자식 위젯은 Container의 크기를 따라간다.
+              color: Colors.red,
+              child: Padding(
+                // padding으로 Container의 여백 보기
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset(
+                  // 가지고 있는 이미지 사용하기
+                  'assets/han.jpg',
+                  width: 100,
+                  height: 100,
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
           ],
         ),
