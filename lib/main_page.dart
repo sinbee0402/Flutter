@@ -59,111 +59,117 @@ class _MainPageState extends State<MainPage> {
       body: Center(
         // Column 추가 : Alt + enter -> Wrap with Column
         // 삭제하고싶은 위젯 : Alt + enter -> remove this widget 선택
-        child: Column(
-          // Column : 세로, 위에서 아래쪽으로 가는 형태
-          // Row : 가로, 왼쪽에서 오른쪽으로 가는 형태
-          // mainAxisAlignment
-          // : 메인 방향 정렬, center는 가운데 방향
-          // Column과 Row를 사용할 때, 위치를 맞추고 싶다면 사용해야한다.
-          // Center로 감싸도 중앙으로 오지 않는다.
-          // Center로 중앙으로 온것은 맞지만, 리스트의 형태로 위나 왼쪽에서부터(?) 시작하게 된다.
-          // 그래서 mainAxisAlignment로 Column이나 Row의 안쪽을 중앙으로 정렬하게 하는 것이다.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              color: Colors.red, //크기가 없으면 지정된 색상이 보이지 않는다.
-              width: 100,
-              height: 100,
-            ),
-            // 위젯과 위젯 사이에 공간을 줄 때, padding이나 SizedBox를 사용하면 된다.
-            SizedBox(height: 30), // 주로 크기만 지정할 때 쓴다. 색상 지정은 없다.
-            Container(height: 30), // 같은 코드지만, 성능상 SizedBox가 더 좋다.
-            Text(
-              '숫자', // 변수의 값을 넣어서 표시
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 40,
+        child: SingleChildScrollView(
+          // 레이아웃을 짤때, 에뮬레이터에 보이는 노란선은 자주 보게 될 것이다.
+          // 우측 Flutter Inspector로 레이아웃에서 무엇이 문제인지 알 수 있다.
+          // 현재 해당 레이아웃의 문제는 위젯에 비해 화면의 길이가 맞지 않았으므로,
+          // SingleChildScrollView를 추가해준다.
+          child: Column(
+            // Column : 세로, 위에서 아래쪽으로 가는 형태
+            // Row : 가로, 왼쪽에서 오른쪽으로 가는 형태
+            // mainAxisAlignment
+            // : 메인 방향 정렬, center는 가운데 방향
+            // Column과 Row를 사용할 때, 위치를 맞추고 싶다면 사용해야한다.
+            // Center로 감싸도 중앙으로 오지 않는다.
+            // Center로 중앙으로 온것은 맞지만, 리스트의 형태로 위나 왼쪽에서부터(?) 시작하게 된다.
+            // 그래서 mainAxisAlignment로 Column이나 Row의 안쪽을 중앙으로 정렬하게 하는 것이다.
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                color: Colors.red, //크기가 없으면 지정된 색상이 보이지 않는다.
+                width: 100,
+                height: 100,
               ),
-              // Reformat Code : Ctrl + Alt + L / option + L
-              // 속성들이 많이 사용이 되는 경우에 사용한다.
-              // Reformat이 되는 경우는
-              // 마지막 속성에 ,(컴마)가 있는 경우 줄이 바뀌면서 정리가 되고,
-              // ,(컴마)가 없는 경우 한줄로 정리가 된다.
-            ),
-            Text(
-              '$number', // 변수의 값을 넣어서 표시
-              style: TextStyle(
+              // 위젯과 위젯 사이에 공간을 줄 때, padding이나 SizedBox를 사용하면 된다.
+              SizedBox(height: 30), // 주로 크기만 지정할 때 쓴다. 색상 지정은 없다.
+              Container(height: 30), // 같은 코드지만, 성능상 SizedBox가 더 좋다.
+              Text(
+                '숫자', // 변수의 값을 넣어서 표시
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 40,
+                ),
+                // Reformat Code : Ctrl + Alt + L / option + L
+                // 속성들이 많이 사용이 되는 경우에 사용한다.
+                // Reformat이 되는 경우는
+                // 마지막 속성에 ,(컴마)가 있는 경우 줄이 바뀌면서 정리가 되고,
+                // ,(컴마)가 없는 경우 한줄로 정리가 된다.
+              ),
+              Text(
+                '$number', // 변수의 값을 넣어서 표시
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 70,
+                ),
+                // Reformat Code : Ctrl + Alt + L / option + L
+                // 속성들이 많이 사용이 되는 경우에 사용한다.
+                // Reformat이 되는 경우는
+                // 마지막 속성에 ,(컴마)가 있는 경우 줄이 바뀌면서 정리가 되고,
+                // ,(컴마)가 없는 경우 한줄로 정리가 된다.
+              ),
+              // 버튼의 종류가 많으니 검색해서 찾아볼 것.
+              // 검색 방법 : flutter button 검색 -> flutter.dev 공식 사이트에서 찾기
+              // 초기 버튼 위젯의 이름에서 현재 어떤 이름인지 알 수 있다.
+              ElevatedButton(
+                // 기본 버튼
+                onPressed: () {
+                  print('ElevatedButton');
+                },
+                child: Text('ElevatedButton'), // 버튼에 들어갈 문자
+              ),
+              TextButton(
+                // 글자로만 된 버튼
+                onPressed: () {},
+                child: Text('TextButton'),
+              ),
+              OutlinedButton(
+                // 외곽에 선이 있는 버튼
+                // 글자로만 된 버튼
+                onPressed: () {},
+                child: Text('OutlinedButton'),
+              ),
+              TextField(
+                // TextField를 꾸민다.
+                decoration: InputDecoration(
+                  labelText: '글자', // Hint Text
+                  border: OutlineInputBorder(), // TextField의 외곽선
+                ),
+                // 글자를 입력할 수 있다.
+                // 영어 상태에서 입력, 한글 상태에서는 입력이 아예 안된다.
+                // 에뮬레이터 내부의 소프트키보드에서 언어를 바꿔서 사용하면 한글이 입력된다.
+                onChanged: (text) {
+                  // onChanged를 사용하려면 매개변수 String을 줘야한다.
+                  print(text);
+                },
+              ),
+              // 인터넷에 있는 이미지 사용하기
+              Image.network(
+                // 경로를 작성하면 된다.
+                'https://images.khan.co.kr/article/2022/11/09/news-p.v1.20221109.bfd446dfa4ff4ac6b2722b3efe461488.jpg',
+                width: 100, // 가로 길이
+                height: 100, // 세로 길이
+                fit: BoxFit.cover, // 꽉 채우기
+              ),
+              Container(
+                // Container의 크기는 지정된 크기가 없을 때, 자식(child) 위젯의 크기를 따른다.
+                // width: 120,
+                // height: 120,
+                // 자식 위젯은 Container의 크기를 따라간다.
                 color: Colors.red,
-                fontSize: 70,
-              ),
-              // Reformat Code : Ctrl + Alt + L / option + L
-              // 속성들이 많이 사용이 되는 경우에 사용한다.
-              // Reformat이 되는 경우는
-              // 마지막 속성에 ,(컴마)가 있는 경우 줄이 바뀌면서 정리가 되고,
-              // ,(컴마)가 없는 경우 한줄로 정리가 된다.
-            ),
-            // 버튼의 종류가 많으니 검색해서 찾아볼 것.
-            // 검색 방법 : flutter button 검색 -> flutter.dev 공식 사이트에서 찾기
-            // 초기 버튼 위젯의 이름에서 현재 어떤 이름인지 알 수 있다.
-            ElevatedButton(
-              // 기본 버튼
-              onPressed: () {
-                print('ElevatedButton');
-              },
-              child: Text('ElevatedButton'), // 버튼에 들어갈 문자
-            ),
-            TextButton(
-              // 글자로만 된 버튼
-              onPressed: () {},
-              child: Text('TextButton'),
-            ),
-            OutlinedButton(
-              // 외곽에 선이 있는 버튼
-              // 글자로만 된 버튼
-              onPressed: () {},
-              child: Text('OutlinedButton'),
-            ),
-            TextField(
-              // TextField를 꾸민다.
-              decoration: InputDecoration(
-                labelText: '글자', // Hint Text
-                border: OutlineInputBorder(), // TextField의 외곽선
-              ),
-              // 글자를 입력할 수 있다.
-              // 영어 상태에서 입력, 한글 상태에서는 입력이 아예 안된다.
-              // 에뮬레이터 내부의 소프트키보드에서 언어를 바꿔서 사용하면 한글이 입력된다.
-              onChanged: (text) {
-                // onChanged를 사용하려면 매개변수 String을 줘야한다.
-                print(text);
-              },
-            ),
-            // 인터넷에 있는 이미지 사용하기
-            Image.network(
-              // 경로를 작성하면 된다.
-              'https://images.khan.co.kr/article/2022/11/09/news-p.v1.20221109.bfd446dfa4ff4ac6b2722b3efe461488.jpg',
-              width: 100, // 가로 길이
-              height: 100, // 세로 길이
-              fit: BoxFit.cover, // 꽉 채우기
-            ),
-            Container(
-              // Container의 크기는 지정된 크기가 없을 때, 자식(child) 위젯의 크기를 따른다.
-              // width: 120,
-              // height: 120,
-              // 자식 위젯은 Container의 크기를 따라간다.
-              color: Colors.red,
-              child: Padding(
-                // padding으로 Container의 여백 보기
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset(
-                  // 가지고 있는 이미지 사용하기
-                  'assets/han.jpg',
-                  width: 100,
-                  height: 100,
-                  fit: BoxFit.cover,
+                child: Padding(
+                  // padding으로 Container의 여백 보기
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset(
+                    // 가지고 있는 이미지 사용하기
+                    'assets/han.jpg',
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
