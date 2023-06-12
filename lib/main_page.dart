@@ -34,6 +34,10 @@ class MainPage extends StatefulWidget {
 // _를 사용할 때 : 해당 클래스 내부에서만 사용할 변수이거나, 다른 곳에서 사용하지 않을 클래스 앞에 붙여준다.
 // 메서드에도 적용이 되는 부분이다. _를 붙여서 데이터를 보호하자는 느낌이다.
 class _MainPageState extends State<MainPage> {
+  // 클래스 내부에서 선언된 변수들은 전역 변수이다.
+  // 여러 메서드 내부에서 사용할 수 있다.
+  // 해당 메서드 내부에서만 사용할 수 있는 변수는 지역 변수이다.
+
   // 변수, 인스턴스, 오브젝트(객체), 상수
   // 변수 : 어디에서나 변경이 가능하다. 하지만 final을 사용하면 변경할 수 없는 상수이다.
   // 상수를 사용하는 게 좋다.
@@ -54,7 +58,10 @@ class _MainPageState extends State<MainPage> {
   // dispose 코드를 작성해줘야 메모리 문제를 해결할 수 있다.
   @override
   void dispose() {
-    number = 11;
+    number = 11; // 전역변수
+    int i = 10; // 지역변수
+    i = 11;
+    print(i);
     _textController.dispose();
     super.dispose();
   }
