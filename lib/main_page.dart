@@ -31,6 +31,8 @@ class MainPage extends StatefulWidget {
 // 해당 클래스 바깥의 변경사항이 반영이 안된다면 상단의 재생버튼으로 다시 Run을 해준다.
 // Hot Reload가 제일 빠르고, Run이 제일 느리다.
 
+// _를 사용할 때 : 해당 클래스 내부에서만 사용할 변수이거나, 다른 곳에서 사용하지 않을 클래스 앞에 붙여준다.
+// 메서드에도 적용이 되는 부분이다. _를 붙여서 데이터를 보호하자는 느낌이다.
 class _MainPageState extends State<MainPage> {
   // 변수명은 소문자로 시작해야 한다.
   // count라는 변수에 값 0을 담음.
