@@ -45,7 +45,11 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+
+  # flutter_lints: ^2.0.0
+  # code 상의 노란줄 없애기
+  # 1. pubspec.yaml 파일에서 flutter_lints 주석처리
+  # 2. 상단의 Pub get 클릭 / Terminal에서 flutter pub get 입력
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
