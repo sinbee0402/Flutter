@@ -34,19 +34,27 @@ class MainPage extends StatefulWidget {
 // _를 사용할 때 : 해당 클래스 내부에서만 사용할 변수이거나, 다른 곳에서 사용하지 않을 클래스 앞에 붙여준다.
 // 메서드에도 적용이 되는 부분이다. _를 붙여서 데이터를 보호하자는 느낌이다.
 class _MainPageState extends State<MainPage> {
+  // 변수, 인스턴스, 오브젝트(객체), 상수
+  // 변수 : 어디에서나 변경이 가능하다. 하지만 final을 사용하면 변경할 수 없는 상수이다.
+  // 상수를 사용하는 게 좋다.
+  // 오브젝트 : 대문자로 시작하고, ()를 사용하는 애들.
+  // 객체를 구현을 해놓은 클래스를 변수에 할당하는 것.
+  // 위젯들은 오브젝트(객체)로 볼 수 있다.
+
   // 변수명은 소문자로 시작해야 한다.
   // count라는 변수에 값 0을 담음.
-  int number = 10;
+  int number = 10; // 변수
   // count -> number, MyHomePage -> MainPage, my_home_page -> main_page
   // 변수, 함수, 클래스 이름 한번에 변경하기
   // : Shift + F6 / 해당 변수, 함수, 클래스명 우클릭 Refactor -> Rename
-  String _text = '';
-  final _textController = TextEditingController();
+  String _text = ''; // 변수
+  final _textController = TextEditingController(); // 상수, 오브젝트(객체)-new가 생략되어있다.
 
   // controller는 사용하고 나서 해제하는 코드를 작성해줘야한다.
   // dispose 코드를 작성해줘야 메모리 문제를 해결할 수 있다.
   @override
   void dispose() {
+    number = 11;
     _textController.dispose();
     super.dispose();
   }
