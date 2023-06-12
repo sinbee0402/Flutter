@@ -4,7 +4,10 @@ import 'package:hello_flutter/main_page.dart';
 // StatelessWidget은 플러터 자체적으로 제공하는 것이다. (material.dart를 써야한다.)
 // Alt + enter로 선택해서 사용하면 된다.
 
+// 함수, 플러터를 시작하는 부분
 void main() {
+  // Material 안에 있는 함수, 앱이 동작을 시작하는 부분.
+  // 건드릴 일이 없다. 삭제가 되면 실행할 수 없다.
   runApp(const MyApp());
 }
 
