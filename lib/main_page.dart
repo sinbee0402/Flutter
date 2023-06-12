@@ -46,6 +46,7 @@ class _MainPageState extends State<MainPage> {
   // 위젯들은 오브젝트(객체)로 볼 수 있다.
 
   // 변수명은 소문자로 시작해야 한다.
+  // =(대입) : 왼쪽 값에 오른쪽 값을 넣을 때 사용한다.
   // count라는 변수에 값 0을 담음.
   int number = 10; // 변수
   // count -> number, MyHomePage -> MainPage, my_home_page -> main_page
@@ -58,11 +59,6 @@ class _MainPageState extends State<MainPage> {
   // dispose 코드를 작성해줘야 메모리 문제를 해결할 수 있다.
   @override
   void dispose() {
-    // =(대입) : 왼쪽 값에 오른쪽 값을 넣을 때 사용한다.
-    number = 11; // 전역변수
-    int i = 10; // 지역변수
-    i = 11;
-    print(i);
     _textController.dispose(); // 세미콜론
     super.dispose();
   }
@@ -253,3 +249,9 @@ class _MainPageState extends State<MainPage> {
 // 우측 상단의 두번째 아이콘을 누르면 위젯의 경계를 확인할 수 있다.
 // Tree에서 위젯을 선택하면 해당 코드를 확인할 수 있다.
 // Flutter Inspector 화면은 하단 Run에서 좌측 상단 3번째 아이콘을 누르면 비슷한 화면을 볼 수 있다.
+
+// flutter clean
+// 지금까지 작성한 빌드한 파일들의 찌꺼기들을 삭제한다.
+// 에뮬레이터 종료 -> Terminal -> flutter clean 입력
+// 상단 탭 Tools -> Flutter -> flutter clean 클릭
+// 하고나면 flutter pub get을 해줘야한다. (Termainal/pubspec.yaml/Tools)
