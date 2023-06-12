@@ -256,3 +256,7 @@ class _MainPageState extends State<MainPage> {
 // 상단 탭 Tools -> Flutter -> flutter clean 클릭
 // 하고나면 flutter pub get을 해줘야한다. (Termainal/pubspec.yaml/Tools)
 // clean을 하고나면 build 파일이 사라진다. 실행을 하면 다시 빌드 파일이 생긴다.
+
+// Debug 디버그
+// 버그가 발생할 수도 있는 상황이 있을 때, 화면이 버그가 난 부분에서 멈춰진다.
+// 에러를 확인하고 해결하는 용도
