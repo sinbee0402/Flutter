@@ -63,7 +63,7 @@ class _MainPageState extends State<MainPage> {
     int i = 10; // 지역변수
     i = 11;
     print(i);
-    _textController.dispose();
+    _textController.dispose(); // 세미콜론
     super.dispose();
   }
 
@@ -101,12 +101,12 @@ class _MainPageState extends State<MainPage> {
             // Center로 감싸도 중앙으로 오지 않는다.
             // Center로 중앙으로 온것은 맞지만, 리스트의 형태로 위나 왼쪽에서부터(?) 시작하게 된다.
             // 그래서 mainAxisAlignment로 Column이나 Row의 안쪽을 중앙으로 정렬하게 하는 것이다.
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center, // 콤마
             children: [
               Container(
                 color: Colors.red, //크기가 없으면 지정된 색상이 보이지 않는다.
-                width: 100,
-                height: 100,
+                width: 100, // 속성들을 사용할 때는 콜론을 사용한다.
+                height: 100, // 콤마를 사용하면 코드정리를 할 수 있다.
               ),
               // 위젯과 위젯 사이에 공간을 줄 때, padding이나 SizedBox를 사용하면 된다.
               SizedBox(height: 30), // 주로 크기만 지정할 때 쓴다. 색상 지정은 없다.
