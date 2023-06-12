@@ -255,3 +255,4 @@ class _MainPageState extends State<MainPage> {
 // 에뮬레이터 종료 -> Terminal -> flutter clean 입력
 // 상단 탭 Tools -> Flutter -> flutter clean 클릭
 // 하고나면 flutter pub get을 해줘야한다. (Termainal/pubspec.yaml/Tools)
+// clean을 하고나면 build 파일이 사라진다. 실행을 하면 다시 빌드 파일이 생긴다.
