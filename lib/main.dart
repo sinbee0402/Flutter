@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/ios_style_screen.dart';
 import 'package:hello_flutter/main_page.dart';
 // 다른 파일에 있는 클래스를 쓰기 위해서는 import를 해야한다.
 // StatelessWidget은 플러터 자체적으로 제공하는 것이다. (material.dart를 써야한다.)
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: const MainPage(), // 시작하는 파일, 첫번째 페이지
+      home: const IosStyleScreen(), // 시작하는 파일, 첫번째 페이지
     );
   }
 }
