@@ -128,19 +128,35 @@ class _MainPageState extends State<MainPage> {
                 onPressed: () {},
                 child: Text('OutlinedButton'),
               ),
-              TextField(
-                // TextField를 꾸민다.
-                decoration: InputDecoration(
-                  labelText: '글자', // Hint Text
-                  border: OutlineInputBorder(), // TextField의 외곽선
-                ),
-                // 글자를 입력할 수 있다.
-                // 영어 상태에서 입력, 한글 상태에서는 입력이 아예 안된다.
-                // 에뮬레이터 내부의 소프트키보드에서 언어를 바꿔서 사용하면 한글이 입력된다.
-                onChanged: (text) {
-                  // onChanged를 사용하려면 매개변수 String을 줘야한다.
-                  print(text);
-                },
+              Row(
+                children: [
+                  Expanded(
+                    // 화면 기울기에 따른 위젯 크기 조절. 자주 쓴다.
+                    flex: 3, // flex로 주변 위젯과의 크기 비율을 조절할 수 있다.
+                    // flex를 설정하지 않으면 기본적으로 1:1 비율.
+                    child: TextField(
+                      // TextField를 꾸민다.
+                      decoration: InputDecoration(
+                        labelText: '글자', // Hint Text
+                        border: OutlineInputBorder(), // TextField의 외곽선
+                      ),
+                      // 글자를 입력할 수 있다.
+                      // 영어 상태에서 입력, 한글 상태에서는 입력이 아예 안된다.
+                      // 에뮬레이터 내부의 소프트키보드에서 언어를 바꿔서 사용하면 한글이 입력된다.
+                      onChanged: (text) {
+                        // onChanged를 사용하려면 매개변수 String을 줘야한다.
+                        print(text);
+                      },
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text('login'),
+                    ),
+                  ),
+                ],
               ),
               // 인터넷에 있는 이미지 사용하기
               Image.network(
