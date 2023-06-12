@@ -91,6 +91,27 @@ class _MyHomePageState extends State<MyHomePage> {
               // 마지막 속성에 ,(컴마)가 있는 경우 줄이 바뀌면서 정리가 되고,
               // ,(컴마)가 없는 경우 한줄로 정리가 된다.
             ),
+            // 버튼의 종류가 많으니 검색해서 찾아볼 것.
+            // 검색 방법 : flutter button 검색 -> flutter.dev 공식 사이트에서 찾기
+            // 초기 버튼 위젯의 이름에서 현재 어떤 이름인지 알 수 있다.
+            ElevatedButton(
+              // 기본 버튼
+              onPressed: () {
+                print('ElevatedButton');
+              },
+              child: Text('ElevatedButton'), // 버튼에 들어갈 문자
+            ),
+            TextButton(
+              // 글자로만 된 버튼
+              onPressed: () {},
+              child: Text('TextButton'),
+            ),
+            OutlinedButton(
+              // 외곽에 선이 있는 버튼
+              // 글자로만 된 버튼
+              onPressed: () {},
+              child: Text('OutlinedButton'),
+            ),
           ],
         ),
       ),
