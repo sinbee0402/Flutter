@@ -169,12 +169,15 @@ class _MainPageState extends State<MainPage> {
                       onPressed: () {
                         // TextField에 사용한 text를 얻을 수 있다.
                         print(_textController.text);
+                        // 화면 갱신, 내용을 공백으로 둬도 알아서 화면을 갱신한다.
+                        setState(() {});
                       },
                       child: Text('login'),
                     ),
                   ),
                 ],
               ),
+              Text(_textController.text),
               // 인터넷에 있는 이미지 사용하기
               Image.network(
                 // 경로를 작성하면 된다.
