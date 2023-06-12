@@ -75,6 +75,9 @@ class _MainPageState extends State<MainPage> {
               width: 100,
               height: 100,
             ),
+            // 위젯과 위젯 사이에 공간을 줄 때, padding이나 SizedBox를 사용하면 된다.
+            SizedBox(height: 30), // 주로 크기만 지정할 때 쓴다. 색상 지정은 없다.
+            Container(height: 30), // 같은 코드지만, 성능상 SizedBox가 더 좋다.
             Text(
               '숫자', // 변수의 값을 넣어서 표시
               style: TextStyle(
