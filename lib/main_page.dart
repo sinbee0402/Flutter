@@ -13,6 +13,13 @@ import 'package:flutter/material.dart';
 // 암묵적인 룰이다.
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
+  // 위 코드에서 Ctrl + B로 MainPage를 사용하는 부분으로 갈 수 있다.
+
+  // 코드에서 값 검색하기 : Ctrl + F / cmd + F
+  // 사용하고 있는 부분 띄우기 : Ctrl + B / cmd + B
+  // 사용되고 있는 부분에서 Ctrl + B를 누르면 선언된 부분으로 돌아갈 수 있다.
+  // 단축키로도 사용할 수 있다.
+  // 최근에 사용했던 파일목록 : Ctrl + E / cmd + E
 
   @override
   State<MainPage> createState() => _MainPageState();
