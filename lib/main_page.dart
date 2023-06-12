@@ -129,6 +129,21 @@ class _MainPageState extends State<MainPage> {
                 print(text);
               },
             ),
+            // 인터넷에 있는 이미지 사용하기
+            Image.network(
+              // 경로를 작성하면 된다.
+              'https://images.khan.co.kr/article/2022/11/09/news-p.v1.20221109.bfd446dfa4ff4ac6b2722b3efe461488.jpg',
+              width: 100, // 가로 길이
+              height: 100, // 세로 길이
+              fit: BoxFit.cover, // 꽉 채우기
+            ),
+            // 가지고 있는 이미지 사용하기
+            Image.asset(
+              'assets/han.jpg',
+              width: 100,
+              height: 100,
+              fit: BoxFit.cover,
+            ),
           ],
         ),
       ),
