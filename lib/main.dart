@@ -18,13 +18,18 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    // Material 디자인을 기본으로 가지고있는 앱을 만들 때,
+    // 가장 처음에 위치해야하는 위젯
+    // 이부분은 손대지 않고, home부분만 수정해서 사용한다.
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        // 전체적인 색상이 바뀐다.
+        // 안되는 색상들이 정해져 있다. -> white, black 등등
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: const MainPage(),
+      home: const MainPage(), // 시작하는 파일, 첫번째 페이지
     );
   }
 }
