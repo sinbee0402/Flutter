@@ -53,7 +53,15 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Text(
           '0',
-          style: TextStyle(color: Colors.red, fontSize: 70),
+          style: TextStyle(
+            color: Colors.red,
+            fontSize: 70,
+          ),
+          // Reformat Code : Ctrl + Alt + L / option + L
+          // 속성들이 많이 사용이 되는 경우에 사용한다.
+          // Reformat이 되는 경우는
+          // 마지막 속성에 ,(컴마)가 있는 경우 줄이 바뀌면서 정리가 되고,
+          // ,(컴마)가 없는 경우 한줄로 정리가 된다.
         ),
       ),
     );
