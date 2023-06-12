@@ -4,6 +4,8 @@ void main() {
   runApp(const MyApp());
 }
 
+// StatelessWidget / StatefulWidget
+// Widget : 화면에 그릴 수 있는 모든 것들. text. button. action_bar.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -21,6 +23,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// stful : 새로운 stateful widget을 만드는 코드.
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
