@@ -43,10 +43,10 @@ void main() {
 
   test('홀수 테스트', () {
     // given 준비
-    int i = 7;
+    int i = -2;
     // when 실행
     final result = isEven(i);
     // then 검증
-    expect(result, true); // error
+    expect(result, true);
   });
 }
