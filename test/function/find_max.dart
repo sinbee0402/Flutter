@@ -1,6 +1,9 @@
 import 'package:dart_basic/homework/test_function.dart';
 import 'package:test/test.dart';
 
+// 06.13.과제
+// 3번.
+
 void main() {
   List<int> list;
 
