@@ -10,3 +10,11 @@ bool isEven(int value) {
     return false;
   }
 }
+
+// 3번.
+int findMax(List<int> value) {
+  value.sort();
+  return value.last;
+
+  // return findMax(value);
+}
