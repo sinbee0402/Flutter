@@ -17,4 +17,5 @@ SeSAC 수료 과정에서 풀었던 문제들입니다. <br>
 - [Debug](https://github.com/sinbee0402/Flutter/tree/SeSAC/debug) : 디버그(Debug)와 Json 변환을 활용해 푼 문제입니다.
 - [Lamda](https://github.com/sinbee0402/Flutter/tree/SeSAC/lamda_function) : Lamda와 고계함수를 활용해 푼 문제입니다.
 - [Asynchronous](https://github.com/sinbee0402/Flutter/tree/SeSAC/Asynchronous) : 비동기처리(Asynchronous)를 활용해 푼 문제입니다.
-- [HTTP](https://github.com/sinbee0402/Flutter/tree/SeSAC/HTTP) : 네트워크 통신(Network communication)을 활용해 푼 문제입니다. 
+- [HTTP](https://github.com/sinbee0402/Flutter/tree/SeSAC/HTTP) : 네트워크 통신(Network communication)을 활용해 푼 문제입니다.
+- [Unit Test](https://github.com/sinbee0402/Flutter/tree/SeSAC/test) / [Bank]() : 단위 테스트(Unit Test)를 활용해 푼 문제입니다.
