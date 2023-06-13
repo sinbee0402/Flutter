@@ -18,3 +18,9 @@ int findMax(List<int> value) {
 
   // return findMax(value);
 }
+
+// 4번.
+String reverseString(String value) {
+  // return value.split('').reversed.join('');
+  return reverseString(value);
+}
