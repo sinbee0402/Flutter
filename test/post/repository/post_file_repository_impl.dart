@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dart_basic/homework/post/model/post.dart';
 import 'package:dart_basic/homework/post/repository/post_file_repository_impl.dart';
 import 'package:dart_basic/homework/post/repository/post_repository.dart';
@@ -7,15 +9,19 @@ import 'package:test/test.dart';
 // 5번.
 
 void main() {
-  PostRepository _repository = PostFileRepositoryImpl();
+  PostRepository _repository = PostFileRepositoryImpl('lib/homework/post/file');
 
   setUp(() async {
-    _repository.addPost(Post(0, 'test1', 'test1'));
-    _repository.addPost(Post(1, 'test2', 'test2'));
+    await _repository.addPost(Post(0, 'test1', 'test1'));
+    await _repository.addPost(Post(1, 'test2', 'test2'));
   });
 
   tearDown(() async {
-    _repository = PostFileRepositoryImpl();
+    final dir = Directory('lib/homework/post/file');
+    if (await dir.exists()) {
+      await Directory('lib/homework/post/file').delete();
+    }
+    _repository = PostFileRepositoryImpl('lib/homework/post/file/');
   });
 
   group('PostRepository', () {
@@ -50,9 +56,10 @@ void main() {
     });
   });
 
-  test('PostMemoryRepository 테스트', () async {
+  test('PostFileRepository 테스트', () async {
     // 준비
-    final PostRepository repository = PostFileRepositoryImpl();
+    final PostRepository repository =
+        PostFileRepositoryImpl('lib/homework/post/file/');
 
     final posts = await repository.getPosts();
     expect(posts.length, 0);
