@@ -8,6 +8,10 @@ import 'package:dart_basic/homework/post/repository/post_repository.dart';
 // 5번.
 
 class PostFileRepositoryImpl implements PostRepository {
+  final String _path;
+
+  PostFileRepositoryImpl(this._path);
+
   List<Post> _posts = [];
 
   // 직렬화 해서 저장
@@ -16,18 +20,20 @@ class PostFileRepositoryImpl implements PostRepository {
   @override
   Future<void> addPost(Post post) async {
     // 포스트 추가
-    final file = File('lib/homework/post/${post.title}');
-    file.writeAsString(jsonEncode(post.toJson()));
+    final file = File('$_path/${post.title}');
+    if (await file.exists()) {
+      await file.writeAsString(jsonEncode(post.toJson()));
+    }
     _posts.add(post);
   }
 
   @override
   Future<void> deletePost(Post post) async {
     // 포스트 삭제
-    final file = File('lib/homework/post/${post.title}');
+    final file = File('$_path/${post.title}');
     if (await file.exists()) {
-      _posts.remove(file);
-      file.delete();
+      _posts.remove(post); // remove는 Object타입
+      await file.delete();
       print('파일을 삭제합니다.');
     } else {
       print('해당 파일이 존재하지 않습니다.');
@@ -37,13 +43,21 @@ class PostFileRepositoryImpl implements PostRepository {
   @override
   Future<List<Post>> getPosts() async {
     // 포스트 불러오기
-    final file = File('lib/homework/post/$_posts');
-    if (await file.exists()) {
-      file.open();
+    final dir = Directory('$_path');
+    // 디렉토리 정보 불러오기
+    if (await dir.exists()) {
+      final files = dir.listSync();
+      _posts = files
+          .map((e) => e as File)
+          .map((e) => e.readAsStringSync())
+          .map((e) => jsonDecode(e))
+          .map((e) => Post.fromJson(e))
+          .toList();
+      return _posts;
     } else {
       print('해당 파일이 존재하지 않습니다.');
+      return [];
     }
-    return _posts;
   }
 
   @override
@@ -51,8 +65,10 @@ class PostFileRepositoryImpl implements PostRepository {
     // 포스트 업데이트/수정
     _posts = _posts.map((e) {
       if (e.id == post.id) {
-        final file = File('lib/homework/post/${post.title}');
-        file.writeAsString(jsonEncode(post.toJson()));
+        final file = File('$_path/${post.title}');
+        if (file.existsSync()) {
+          file.writeAsStringSync(jsonEncode(post.toJson()));
+        }
         return post;
       }
       return e;
