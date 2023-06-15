@@ -1,16 +1,17 @@
 # hello_flutter
 
-A new Flutter project.
+플러터 강의 1챕터를 듣고 만든 플러터 프로젝트입니다. <br>
+해당 강의에서 배운 코드들을 주석과 코드로 정리했습니다. <br>
+
+~~(코드가 많이 지저분합니다..)~~
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+It is a platter project created after listening to a chapter of the Platter River. <br>
+I summarized the code I learned in the lecture into annotations and codes. <br>
 
-A few resources to get you started if this is your first Flutter project:
+~~(The code is dirty...)~~
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<br>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Flutter 초입문 왕초보편 - 섹션 0. Hello Flutter](https://www.inflearn.com/course/%ED%94%8C%EB%9F%AC%ED%84%B0-%EC%B4%88%EC%9E%85%EB%AC%B8-%EC%99%95%EC%B4%88%EB%B3%B4/)
