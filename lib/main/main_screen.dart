@@ -51,6 +51,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     // 잘못된 const 사용으로 Scaffold 이하 코드에서 에러가 발생.
+    // Scaffold 내부에 _formKey라는 변수를 사용했으므로 const(상수)를 주면 안된다.
     // const Scaffold => Scaffold
     return Scaffold(
       appBar: AppBar(
