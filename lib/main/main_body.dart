@@ -65,6 +65,7 @@ class _MainBodyState extends State<MainBody> {
             'Doridol2'),
         // Row 쇼츠
         Container(
+          height: 268,
           color: Colors.black,
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -78,7 +79,19 @@ class _MainBodyState extends State<MainBody> {
               ],
             ),
           ),
-        )
+        ),
+        Video(
+            'https://tn.tv.nate.com/unsafe/1280x720/https://fs.jtbc.co.kr/joydata/CP00000001/prog/media/voyage/img/20230517_194514_134_1.jpg',
+            '28:28',
+            'https://yt3.ggpht.com/LjGoq9rEwlUNNKHGZmbVMoC2Z6g9QULdshHqr6TJHOQ4_nqbGaRd9D7AZcITnzCJdXx3qXDYFnA=s68-c-k-c0x00ffffff-no-rj',
+            '지금 봐도 대단했던 싱어게인 2화 요약.mp4 | 싱어게인 | JTBC 201123 방송',
+            'JTBC Voyage'),
+        Video(
+            'https://i.ytimg.com/vi/DCbKibx9p5U/maxresdefault.jpg',
+            '52:09',
+            'https://yt3.ggpht.com/c3uDDw9UdUzt7MyjZkE5hq-FPB0THxPs0USiNC8n1aCDBIxwEqU09ImAzQ5D7M5zRWSy3-Xp=s48-c-k-c0x00ffffff-no-rj',
+            '불멍하면서 듣는 조용한 일렉기타 playlist (cover)',
+            'Doridol2'),
       ],
     );
   }
