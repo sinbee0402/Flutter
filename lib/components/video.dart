@@ -24,6 +24,7 @@ class Video extends StatelessWidget {
               bottom: 5,
               right: 5,
               child: Container(
+                width: 48,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
                     color: Colors.black45),
@@ -32,6 +33,7 @@ class Video extends StatelessWidget {
                   style: const TextStyle(
                     color: Colors.white,
                   ),
+                  textAlign: TextAlign.center,
                 ),
               ),
             )
