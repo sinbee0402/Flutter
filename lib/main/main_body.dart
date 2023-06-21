@@ -31,7 +31,7 @@ class _MainBodyState extends State<MainBody> {
                     width: 56,
                     height: 32,
                     decoration: BoxDecoration(
-                      color: Colors.grey,
+                      color: const Color(0xFF323232),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: const Icon(
