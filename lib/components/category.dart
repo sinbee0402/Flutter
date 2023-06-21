@@ -13,7 +13,7 @@ class Category extends StatelessWidget {
         width: 56,
         height: 32,
         decoration: BoxDecoration(
-          color: Colors.black45,
+          color: Colors.grey,
           borderRadius: BorderRadius.circular(8),
         ),
         child: Center(

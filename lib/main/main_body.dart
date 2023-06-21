@@ -20,30 +20,33 @@ class _MainBodyState extends State<MainBody> {
         // Row 카테고리
         Container(
           color: Colors.black,
-          child: Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(4.0),
-                child: Container(
-                  width: 56,
-                  height: 32,
-                  decoration: BoxDecoration(
-                    color: Colors.black45,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: const Icon(
-                    Icons.explore_outlined,
-                    color: Colors.white,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: Container(
+                    width: 56,
+                    height: 32,
+                    decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: const Icon(
+                      Icons.explore_outlined,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-              ),
-              Category('전체'),
-              Category('게임'),
-              Category('뉴스'),
-              Category('실시간'),
-              Category('믹스'),
-              Category('노래'),
-            ],
+                Category('전체'),
+                Category('게임'),
+                Category('뉴스'),
+                Category('실시간'),
+                Category('믹스'),
+                Category('노래'),
+              ],
+            ),
           ),
         ),
         // Video
