@@ -66,14 +66,17 @@ class _MainBodyState extends State<MainBody> {
         // Row 쇼츠
         Container(
           color: Colors.black,
-          child: Row(
-            children: [
-              Shorts('assets/shorts1.PNG', '[#비투비] 4개월만에 초코하임 먹고 신난 이창섭',
-                  '조회수 373만회'),
-              Shorts('assets/shorts2.PNG', '방귀 뀌었을 때 춰야하는 춤', '조회수 867만회'),
-              Shorts(
-                  'assets/shorts3.PNG', '인어공주 바위🔥해외 반응 #인어공주실사판', '조l회수 36만회'),
-            ],
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Shorts('assets/shorts1.PNG', '[#비투비] 4개월만에 초코하임 먹고 신난 이창섭',
+                    '조회수 373만회'),
+                Shorts('assets/shorts2.PNG', '방귀 뀌었을 때 춰야하는 춤', '조회수 867만회'),
+                Shorts('assets/shorts3.PNG', '인어공주 바위🔥해외 반응 #인어공주실사판',
+                    '조l회수 36만회'),
+              ],
+            ),
           ),
         )
       ],

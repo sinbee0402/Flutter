@@ -14,8 +14,8 @@ class Shorts extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            width: 88,
-            height: 144,
+            width: 136,
+            height: 240,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
             ),
@@ -27,18 +27,34 @@ class Shorts extends StatelessWidget {
           Positioned(
             bottom: 5,
             left: 5,
-            child: Text(
-              '$title\n$hits',
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 14,
-              ),
+            child: Column(
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                  ),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                Text(
+                  hits,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                  ),
+                ),
+              ],
             ),
           ),
           const Positioned(
             top: 5,
             right: 5,
-            child: Icon(Icons.more_vert),
+            child: Icon(
+              Icons.more_vert,
+              color: Colors.grey,
+            ),
           )
         ],
       ),
