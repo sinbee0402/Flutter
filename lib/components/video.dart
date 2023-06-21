@@ -89,9 +89,11 @@ class Video extends StatelessWidget {
                 right: 0,
                 top: 0,
                 child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.more_vert),
-                ),
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.more_vert,
+                      color: Colors.white,
+                    )),
               )
             ],
           ),
