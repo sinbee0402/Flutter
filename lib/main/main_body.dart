@@ -19,6 +19,7 @@ class _MainBodyState extends State<MainBody> {
       children: [
         // Row 카테고리
         Container(
+          height: 56,
           color: Colors.black,
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
