@@ -39,35 +39,60 @@ class Video extends StatelessWidget {
             )
           ],
         ),
-        Container(
-          color: Colors.black,
-          child: Row(
+        SizedBox(
+          height: 72,
+          child: Stack(
             children: [
-              Image.network(
-                userImgUrl,
-                fit: BoxFit.contain,
-              ),
-              Column(
-                children: [
-                  Text(
-                    title,
-                    style: const TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 12),
-                    textAlign: TextAlign.start,
-                  ),
-                  Text(
-                    text,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 10,
+              Container(
+                color: Colors.black,
+                child: Row(
+                  children: [
+                    Image.network(
+                      userImgUrl,
+                      fit: BoxFit.contain,
                     ),
-                    textAlign: TextAlign.start,
-                  ),
-                ],
+                    SizedBox(width: 5),
+                    SizedBox(
+                      width: 272,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              title,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              textAlign: TextAlign.start,
+                            ),
+                            Text(
+                              text,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
+              Positioned(
+                right: 0,
+                top: 0,
+                child: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.more_vert),
+                ),
+              )
             ],
           ),
         )
