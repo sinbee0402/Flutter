@@ -28,6 +28,7 @@ class Shorts extends StatelessWidget {
             bottom: 5,
             left: 5,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   title,
