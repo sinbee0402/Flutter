@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Shorts extends StatelessWidget {
-  String videoImgUrl;
-  String title;
-  String hits;
+  final String videoImgUrl;
+  final String title;
+  final String hits;
 
   Shorts(this.videoImgUrl, this.title, this.hits, {super.key});
 

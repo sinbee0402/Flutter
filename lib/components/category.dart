@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Category extends StatelessWidget {
-  String text;
+  final String text;
 
   Category(this.text, {super.key});
 

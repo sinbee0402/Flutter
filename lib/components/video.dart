@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Video extends StatelessWidget {
-  String videoImgUrl;
-  String time;
-  String userImgUrl;
-  String title;
-  String text;
+  final String videoImgUrl;
+  final String time;
+  final String userImgUrl;
+  final String title;
+  final String text;
 
   Video(this.videoImgUrl, this.time, this.userImgUrl, this.title, this.text,
       {super.key});

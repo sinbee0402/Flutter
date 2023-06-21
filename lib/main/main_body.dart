@@ -4,14 +4,9 @@ import 'package:flutter/material.dart';
 
 import '../components/category.dart';
 
-class MainBody extends StatefulWidget {
+class MainBody extends StatelessWidget {
   const MainBody({Key? key}) : super(key: key);
 
-  @override
-  State<MainBody> createState() => _MainBodyState();
-}
-
-class _MainBodyState extends State<MainBody> {
   @override
   Widget build(BuildContext context) {
     return ListView(
