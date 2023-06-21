@@ -118,6 +118,6 @@ class _MainScreenState extends State<MainScreen> {
                 ],
               )
             : null,
-        body: const MainBody());
+        body: MainBody(scrollController: _scrollController));
   }
 }

@@ -5,11 +5,13 @@ import 'package:flutter/material.dart';
 import '../components/category.dart';
 
 class MainBody extends StatelessWidget {
-  const MainBody({Key? key}) : super(key: key);
+  final ScrollController scrollController;
+  const MainBody({Key? key, required this.scrollController}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListView(
+      controller: scrollController,
       scrollDirection: Axis.vertical,
       children: [
         // Row 카테고리
