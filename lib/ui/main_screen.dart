@@ -1,5 +1,5 @@
 import 'package:clone_food_delivery/ui/components/custom_bottom_navigation.dart';
-import 'package:clone_food_delivery/ui/components/custom_appbar.dart';
+import 'package:clone_food_delivery/ui/components/custom_main_appbar.dart';
 import 'package:clone_food_delivery/ui/components/elevated_btn.dart';
 import 'package:clone_food_delivery/ui/components/scroll_item.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(160.0),
-        child: CustomAppbar(),
+        child: CustomMainAppbar(),
       ),
       bottomNavigationBar: CustomBottomNavigation(
         currentPageIndex: _selectedIndex,
