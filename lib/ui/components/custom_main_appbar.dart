@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'custom_text.dart';
 
-class CustomAppbar extends StatelessWidget {
-  const CustomAppbar({Key? key}) : super(key: key);
+class CustomMainAppbar extends StatelessWidget {
+  const CustomMainAppbar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.transparent,
       flexibleSpace: Container(
-        height: 184,
         decoration: const BoxDecoration(
           color: Color(0xff6B69C7),
           borderRadius: BorderRadius.only(
