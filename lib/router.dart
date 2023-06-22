@@ -6,13 +6,12 @@ final router = GoRouter(
   initialLocation: '/main',
   routes: [
     GoRoute(
-        path: '/main',
-        builder: (context, state) => const MainScreen(),
-        routes: [
-          GoRoute(
-            path: 'detail',
-            builder: (context, state) => const DetailScreen(),
-          ),
-        ])
+      path: '/main',
+      builder: (context, state) => const MainScreen(),
+    ),
+    GoRoute(
+      path: '/detail',
+      builder: (context, state) => const DetailScreen(),
+    ),
   ],
 );
