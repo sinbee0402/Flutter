@@ -1,5 +1,5 @@
-import 'package:bmi_calculator/result/result_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class MainScreen extends StatefulWidget {
@@ -95,22 +95,30 @@ class _MainScreenState extends State<MainScreen> {
               ),
               const SizedBox(height: 8),
               ElevatedButton(
-                onPressed: () {
+                onPressed: () async {
                   if (_formKey.currentState?.validate() == false) {
                     return;
                   }
 
                   save();
 
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ResultScreen(
-                        height: double.parse(_heightController.text),
-                        weight: double.parse(_weightController.text),
-                      ),
-                    ),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) => ResultScreen(
+                  //       height: double.parse(_heightController.text),
+                  //       weight: double.parse(_weightController.text),
+                  //     ),
+                  //   ),
+                  // );
+
+                  context.push(Uri(
+                    path: '/main/result',
+                    queryParameters: {
+                      'height': _heightController.text,
+                      'weight': _weightController.text,
+                    },
+                  ).toString());
                 },
                 child: const Text('결과'),
               ),
