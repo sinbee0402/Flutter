@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class BottomNavigation extends StatefulWidget {
+class CustomBottomNavigation extends StatefulWidget {
   int currentPageIndex = 0;
 
-  BottomNavigation({
+  CustomBottomNavigation({
     Key? key,
     required this.currentPageIndex,
   }) : super(key: key);
 
   @override
-  State<BottomNavigation> createState() => _BottomNavigationState();
+  State<CustomBottomNavigation> createState() => _CustomBottomNavigationState();
 }
 
-class _BottomNavigationState extends State<BottomNavigation> {
+class _CustomBottomNavigationState extends State<CustomBottomNavigation> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
