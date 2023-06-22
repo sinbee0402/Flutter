@@ -1,4 +1,4 @@
-import 'package:clone_food_delivery/ui/main_screen.dart';
+import 'package:clone_food_delivery/router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,13 +10,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: router,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xff6B69C7)),
         useMaterial3: true,
       ),
-      home: const MainScreen(),
     );
   }
 }
