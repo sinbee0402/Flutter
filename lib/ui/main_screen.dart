@@ -1,6 +1,6 @@
-import 'package:clone_food_delivery/components/bottom_navigation.dart';
-import 'package:clone_food_delivery/components/custom_appbar.dart';
-import 'package:clone_food_delivery/components/elevated_btn.dart';
+import 'package:clone_food_delivery/ui/components/bottom_navigation.dart';
+import 'package:clone_food_delivery/ui/components/custom_appbar.dart';
+import 'package:clone_food_delivery/ui/components/elevated_btn.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -11,7 +11,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int _selectedIndex = 0;
+  final int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -56,6 +56,7 @@ class _MainScreenState extends State<MainScreen> {
                 child: Stack(
                   children: [
                     Container(
+                      width: double.infinity,
                       height: 150,
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -76,16 +77,16 @@ class _MainScreenState extends State<MainScreen> {
                       //   ],
                       // ),
                     ),
-                    Positioned(
-                      left: 8,
-                      bottom: 5,
-                      width: 150,
-                      height: 200,
-                      child: Image.network(
-                        'https://www.discoverlosangeles.com/sites/default/files/images/2019-01/laxbw-prime-1715-hor-wide.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp',
-                        fit: BoxFit.contain,
-                      ),
-                    ),
+                    // Positioned(
+                    //   left: 8,
+                    //   bottom: 5,
+                    //   width: 150,
+                    //   height: 200,
+                    //   child: Image.network(
+                    //     'https://www.discoverlosangeles.com/sites/default/files/images/2019-01/laxbw-prime-1715-hor-wide.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp',
+                    //     fit: BoxFit.contain,
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

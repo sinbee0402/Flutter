@@ -1,4 +1,4 @@
-import 'package:clone_food_delivery/main_screen.dart';
+import 'package:clone_food_delivery/ui/main_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
