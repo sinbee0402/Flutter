@@ -1,16 +1,17 @@
-# gps_map
+# gps_map_app
 
-A new Flutter project.
+ google Map을 활용한 플러터 프로젝트입니다. 
+user의 위치를 띄우는 기능을 구현한 앱으로 기능은 다음과 같습니다.
+- user의 현위치를 띄워줍니다.
+- user가 이동한 거리를 선으로 그려줍니다. (이전위치 - 현위치)
 
-## Getting Started
+<br>
 
-This project is a starting point for a Flutter application.
+This is a flutter project using Google Map. 
+This application implements the function of displaying the user's location, and features are as follows.
+- Displays the current location of the user.
+- The user draws the distance traveled with a line. (Previous Location - Current Location)
 
-A few resources to get you started if this is your first Flutter project:
+## 관련 사이트(Related Links)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [인프런 강의 Flutter](https://www.inflearn.com/course/%ED%94%8C%EB%9F%AC%ED%84%B0-%EC%B4%88%EC%9E%85%EB%AC%B8-%EC%99%95%EC%B4%88%EB%B3%B4/)
