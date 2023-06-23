@@ -2,9 +2,9 @@
 
 기기의 자이로 센서를 사용해 화면의 원을 이동하는 기능을 구현한 플러터 프로젝트입니다.
 
-<br>
-
 This is a flutter project that enables the function of moving circles on the screen using gyro sensors of equipment.
+
+<br>
 
 ## 관련 사이트(Related Links)
 
