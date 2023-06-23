@@ -3,10 +3,10 @@
 앱에서 실로폰을 칠 수 있는 플러터 프로젝트입니다.
 해당 계이름에 맞는 음을 낼 수 있습니다.
 
-<br>
-
 This is a flutter project where you can play the xylophone with the app.
 You can make sounds that match the line name.
+
+<br>
 
 ## 관련 사이트(Related Links)
 
