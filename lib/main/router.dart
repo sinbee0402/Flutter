@@ -10,25 +10,26 @@ final router = GoRouter(
       builder: (context, state) => const MainScreen(),
       // 실행 안됨.
       // Exception: no routes for location /result?height=165&weight=55
-      // routes: [
-      //   GoRoute(
-      //       path: 'result',
-      //       builder: (context, state) {
-      //         double height = double.parse(state.queryParameters['height']!);
-      //         double weight = double.parse(state.queryParameters['weight']!);
-      //
-      //         return ResultScreen(height: height, weight: weight);
-      //       })
-      // ],
-    ),
-    GoRoute(
-      path: '/main/result',
-      builder: (context, state) {
-        double height = double.parse(state.queryParameters['height']!);
-        double weight = double.parse(state.queryParameters['weight']!);
+      // -> 사용을 할 때는 /main/result로 작성을 해야 실행이 된다.
+      routes: [
+        GoRoute(
+            path: 'result',
+            builder: (context, state) {
+              double height = double.parse(state.queryParameters['height']!);
+              double weight = double.parse(state.queryParameters['weight']!);
 
-        return ResultScreen(height: height, weight: weight);
-      },
+              return ResultScreen(height: height, weight: weight);
+            })
+      ],
     ),
+    // GoRoute(
+    //   path: '/main/result',
+    //   builder: (context, state) {
+    //     double height = double.parse(state.queryParameters['height']!);
+    //     double weight = double.parse(state.queryParameters['weight']!);
+    //
+    //     return ResultScreen(height: height, weight: weight);
+    //   },
+    // ),
   ],
 );
