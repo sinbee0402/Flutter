@@ -112,6 +112,7 @@ class _MainScreenState extends State<MainScreen> {
                   //   ),
                   // );
 
+                  // Uri를 호출안하면 queryParameters 자체가 안나온다.
                   context.push(Uri(
                     path: '/main/result',
                     queryParameters: {
