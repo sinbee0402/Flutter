@@ -1,16 +1,23 @@
-# my_web_browser
+# my_web_browser_app
 
-A new Flutter project.
+앱에서 웹사이트를 띄우는 플러터 프로젝트입니다.
+기능은 다음과 같습니다. 
+- 초기 화면에서는 플러터 공식 웹사이트를 띄워줍니다.
+- ≡ 아이콘을 누르면 다른 웹사이트 목록을 보여줍니다.
+  - 네이버의 웹사이트를 띄워줍니다.
+  - 구글의 웹사이트를 띄워줍니다.
+  - 카카오의 웹사이트를 띄워줍니다.
 
-## Getting Started
+<br>
 
-This project is a starting point for a Flutter application.
+This is a flutter project that displays websites from the app. Features include.
 
-A few resources to get you started if this is your first Flutter project:
+- The initial screen displays the flutter official website.
+- ≡ Click the icon to display a list of other websites.
+  - Displays the naver website.
+  - Displays the Google website.
+  - They will upload a Kakao website.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 관련 사이트(Related Links)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [인프런 강의 Flutter](https://www.inflearn.com/course/%ED%94%8C%EB%9F%AC%ED%84%B0-%EC%B4%88%EC%9E%85%EB%AC%B8-%EC%99%95%EC%B4%88%EB%B3%B4/)
