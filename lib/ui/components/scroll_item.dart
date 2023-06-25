@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class ScrollItem extends StatelessWidget {
+  // 묶기
   String imgUrl;
   String restaurant;
   String address;
+
   double distance;
   String foodType;
 
@@ -21,7 +23,10 @@ class ScrollItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.push('/detail');
+        context.push(Uri(
+          path: '/detail',
+          queryParameters: {'imgUrl': imgUrl},
+        ).toString());
       },
       child: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -56,7 +61,7 @@ class ScrollItem extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(width: 16),
+                  const SizedBox(width: 4),
                   Expanded(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
