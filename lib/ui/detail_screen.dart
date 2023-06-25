@@ -1,15 +1,24 @@
+import 'package:clone_food_delivery/ui/components/custom_detail_appbar.dart';
 import 'package:flutter/material.dart';
 
-class DetailScreen extends StatefulWidget {
-  const DetailScreen({Key? key}) : super(key: key);
+class DetailScreen extends StatelessWidget {
+  String imgUrl;
 
-  @override
-  State<DetailScreen> createState() => _DetailScreenState();
-}
+  DetailScreen({
+    Key? key,
+    required this.imgUrl,
+  }) : super(key: key);
 
-class _DetailScreenState extends State<DetailScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(240.0),
+        child: Hero(
+          tag: 'detail_app_bar',
+          child: CustomDetailAppbar(imgUrl: imgUrl),
+        ),
+      ),
+    );
   }
 }

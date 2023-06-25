@@ -11,7 +11,13 @@ final router = GoRouter(
     ),
     GoRoute(
       path: '/detail',
-      builder: (context, state) => const DetailScreen(),
+      builder: (context, state) {
+        String imgUrl = state.queryParameters['imgUrl']!;
+
+        return DetailScreen(
+          imgUrl: imgUrl,
+        );
+      },
     ),
   ],
 );
