@@ -51,14 +51,14 @@ class _MainScreenState extends State<MainScreen> {
           ),
           const SizedBox(height: 8),
           Expanded(
-            child: Hero(
-              tag: 'scroll_view_hero',
-              child: SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child: Column(
-                  children: [
-                    // item 8개
-                    ScrollItem(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(
+                children: [
+                  // item 8개
+                  Hero(
+                    tag: 'detail_app_bar',
+                    child: ScrollItem(
                       imgUrl:
                           'https://www.discoverlosangeles.com/sites/default/files/images/2019-01/laxbw-prime-1715-hor-wide.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp',
                       restaurant: '11 Mirrirs Rooftop',
@@ -66,64 +66,64 @@ class _MainScreenState extends State<MainScreen> {
                       distance: 11.1,
                       foodType: 'Seafood',
                     ),
-                    ScrollItem(
-                      imgUrl:
-                          'https://www.discoverlosangeles.com/sites/default/files/images/2019-01/laxbw-prime-1715-hor-wide.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp',
-                      restaurant: '11 Mirrirs Rooftop',
-                      address: ' 426 Amsterdam Ave, NY',
-                      distance: 11.1,
-                      foodType: 'Seafood',
-                    ),
-                    ScrollItem(
-                      imgUrl:
-                          'https://www.discoverlosangeles.com/sites/default/files/images/2019-01/laxbw-prime-1715-hor-wide.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp',
-                      restaurant: '11 Mirrirs Rooftop',
-                      address: ' 426 Amsterdam Ave, NY',
-                      distance: 11.1,
-                      foodType: 'Seafood',
-                    ),
-                    ScrollItem(
-                      imgUrl:
-                          'https://www.discoverlosangeles.com/sites/default/files/images/2019-01/laxbw-prime-1715-hor-wide.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp',
-                      restaurant: '11 Mirrirs Rooftop',
-                      address: ' 426 Amsterdam Ave, NY',
-                      distance: 11.1,
-                      foodType: 'Seafood',
-                    ),
-                    ScrollItem(
-                      imgUrl:
-                          'https://www.discoverlosangeles.com/sites/default/files/images/2019-01/laxbw-prime-1715-hor-wide.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp',
-                      restaurant: '11 Mirrirs Rooftop',
-                      address: ' 426 Amsterdam Ave, NY',
-                      distance: 11.1,
-                      foodType: 'Seafood',
-                    ),
-                    ScrollItem(
-                      imgUrl:
-                          'https://www.discoverlosangeles.com/sites/default/files/images/2019-01/laxbw-prime-1715-hor-wide.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp',
-                      restaurant: '11 Mirrirs Rooftop',
-                      address: ' 426 Amsterdam Ave, NY',
-                      distance: 11.1,
-                      foodType: 'Seafood',
-                    ),
-                    ScrollItem(
-                      imgUrl:
-                          'https://www.discoverlosangeles.com/sites/default/files/images/2019-01/laxbw-prime-1715-hor-wide.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp',
-                      restaurant: '11 Mirrirs Rooftop',
-                      address: ' 426 Amsterdam Ave, NY',
-                      distance: 11.1,
-                      foodType: 'Seafood',
-                    ),
-                    ScrollItem(
-                      imgUrl:
-                          'https://www.discoverlosangeles.com/sites/default/files/images/2019-01/laxbw-prime-1715-hor-wide.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp',
-                      restaurant: '11 Mirrirs Rooftop',
-                      address: ' 426 Amsterdam Ave, NY',
-                      distance: 11.1,
-                      foodType: 'Seafood',
-                    ),
-                  ],
-                ),
+                  ),
+                  ScrollItem(
+                    imgUrl:
+                        'https://www.discoverlosangeles.com/sites/default/files/images/2019-01/laxbw-prime-1715-hor-wide.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp',
+                    restaurant: '11 Mirrirs Rooftop',
+                    address: ' 426 Amsterdam Ave, NY',
+                    distance: 11.1,
+                    foodType: 'Seafood',
+                  ),
+                  ScrollItem(
+                    imgUrl:
+                        'https://www.discoverlosangeles.com/sites/default/files/images/2019-01/laxbw-prime-1715-hor-wide.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp',
+                    restaurant: '11 Mirrirs Rooftop',
+                    address: ' 426 Amsterdam Ave, NY',
+                    distance: 11.1,
+                    foodType: 'Seafood',
+                  ),
+                  ScrollItem(
+                    imgUrl:
+                        'https://www.discoverlosangeles.com/sites/default/files/images/2019-01/laxbw-prime-1715-hor-wide.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp',
+                    restaurant: '11 Mirrirs Rooftop',
+                    address: ' 426 Amsterdam Ave, NY',
+                    distance: 11.1,
+                    foodType: 'Seafood',
+                  ),
+                  ScrollItem(
+                    imgUrl:
+                        'https://www.discoverlosangeles.com/sites/default/files/images/2019-01/laxbw-prime-1715-hor-wide.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp',
+                    restaurant: '11 Mirrirs Rooftop',
+                    address: ' 426 Amsterdam Ave, NY',
+                    distance: 11.1,
+                    foodType: 'Seafood',
+                  ),
+                  ScrollItem(
+                    imgUrl:
+                        'https://www.discoverlosangeles.com/sites/default/files/images/2019-01/laxbw-prime-1715-hor-wide.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp',
+                    restaurant: '11 Mirrirs Rooftop',
+                    address: ' 426 Amsterdam Ave, NY',
+                    distance: 11.1,
+                    foodType: 'Seafood',
+                  ),
+                  ScrollItem(
+                    imgUrl:
+                        'https://www.discoverlosangeles.com/sites/default/files/images/2019-01/laxbw-prime-1715-hor-wide.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp',
+                    restaurant: '11 Mirrirs Rooftop',
+                    address: ' 426 Amsterdam Ave, NY',
+                    distance: 11.1,
+                    foodType: 'Seafood',
+                  ),
+                  ScrollItem(
+                    imgUrl:
+                        'https://www.discoverlosangeles.com/sites/default/files/images/2019-01/laxbw-prime-1715-hor-wide.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp',
+                    restaurant: '11 Mirrirs Rooftop',
+                    address: ' 426 Amsterdam Ave, NY',
+                    distance: 11.1,
+                    foodType: 'Seafood',
+                  ),
+                ],
               ),
             ),
           ),
