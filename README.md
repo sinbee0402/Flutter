@@ -1,16 +1,11 @@
-# tilt_sensor
+# tilt_sensor_app
 
-A new Flutter project.
+기기의 자이로 센서를 사용해 수평을 측정하는 기능을 구현한 플러터 프로젝트입니다.
 
-## Getting Started
+This is a platter project that implements the function of measuring horizontality using gyro sensors on equipment.
 
-This project is a starting point for a Flutter application.
+<br>
 
-A few resources to get you started if this is your first Flutter project:
+## 관련 사이트(Related Links)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [인프런 강의 Flutter](https://www.inflearn.com/course/%ED%94%8C%EB%9F%AC%ED%84%B0-%EC%B4%88%EC%9E%85%EB%AC%B8-%EC%99%95%EC%B4%88%EB%B3%B4/)
