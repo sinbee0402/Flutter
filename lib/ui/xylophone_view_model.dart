@@ -23,7 +23,7 @@ class XylophoneViewModel {
   Future<void> initSoundPool() async {
     for (String soundFile in sounds) {
       int soundId = await rootBundle
-          .load(soundFile)
+          .load('assets/$soundFile')
           .then((soundData) => pool.load(soundData));
 
       soundIds.add(soundId);
