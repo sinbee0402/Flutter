@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ResultViewModel {
-  final double height;
-  final double weight;
-
-  ResultViewModel({required this.height, required this.weight});
-
-  String getBmiResult() {
-    final bmi = weight / ((height / 100.0) * (height / 100.0));
+  String getBmiResult(int bmi) {
     String result = '저체중';
     if (bmi >= 35) {
       result = '고도 비만';
@@ -23,8 +17,7 @@ class ResultViewModel {
     return result;
   }
 
-  Icon getBmiIcon() {
-    final bmi = weight / ((height / 100.0) * (height / 100.0));
+  Icon getBmiIcon(int bmi) {
     Icon icon = const Icon(
       Icons.sentiment_dissatisfied,
       color: Colors.blue,

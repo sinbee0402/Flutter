@@ -9,13 +9,14 @@ class ResultScreen extends StatelessWidget {
     Key? key,
     required this.height,
     required this.weight,
-  })  : viewModel = ResultViewModel(height: height, weight: weight),
-        super(key: key);
+  }) : super(key: key);
 
-  final ResultViewModel viewModel;
+  final viewModel = ResultViewModel();
 
   @override
   Widget build(BuildContext context) {
+    final bmi = weight / ((height / 100.0) * (height / 100.0));
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('결과'),
@@ -25,10 +26,10 @@ class ResultScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              viewModel.getBmiResult(),
+              viewModel.getBmiResult(bmi),
               style: const TextStyle(fontSize: 36),
             ),
-            viewModel.getBmiIcon()
+            viewModel.getBmiIcon(bmi)
           ],
         ),
       ),
