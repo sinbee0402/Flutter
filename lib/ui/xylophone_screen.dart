@@ -4,10 +4,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:xylophone/ui/xylophone_view_model.dart';
 
-class XylophoneScreen extends StatelessWidget {
-  XylophoneScreen({Key? key}) : super(key: key);
+class XylophoneScreen extends StatefulWidget {
+  const XylophoneScreen({Key? key}) : super(key: key);
 
+  @override
+  State<XylophoneScreen> createState() => _XylophoneScreenState();
+}
+
+class _XylophoneScreenState extends State<XylophoneScreen> {
   final viewModel = XylophoneViewModel();
+
+  @override
+  void dispose() {
+    viewModel.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,37 +44,67 @@ class XylophoneScreen extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 16.0),
-                    child: gunban('도', Colors.red, viewModel.soundIds[0]),
+                    child: gunban(
+                      '도',
+                      Colors.red,
+                      onPress: () => viewModel.soundDo1(),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 24.0),
-                    child: gunban('레', Colors.orange, viewModel.soundIds[1]),
+                    child: gunban(
+                      '레',
+                      Colors.orange,
+                      onPress: () => viewModel.soundRe(),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 32.0),
-                    child: gunban('미', Colors.yellow, viewModel.soundIds[2]),
+                    child: gunban(
+                      '미',
+                      Colors.yellow,
+                      onPress: () => viewModel.soundMi(),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 40.0),
-                    child:
-                        gunban('파', Colors.lightGreen, viewModel.soundIds[3]),
+                    child: gunban(
+                      '파',
+                      Colors.lightGreen,
+                      onPress: () => viewModel.soundFa(),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 48.0),
-                    child: gunban('솔', Colors.green, viewModel.soundIds[4]),
+                    child: gunban(
+                      '솔',
+                      Colors.green,
+                      onPress: () => viewModel.soundSol(),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 56.0),
-                    child: gunban('라', Colors.blue, viewModel.soundIds[5]),
+                    child: gunban(
+                      '라',
+                      Colors.blue,
+                      onPress: () => viewModel.soundLa(),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 64.0),
                     child: gunban(
-                        '시', Colors.deepPurpleAccent, viewModel.soundIds[6]),
+                      '시',
+                      Colors.deepPurpleAccent,
+                      onPress: () => viewModel.soundSi(),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 72.0),
-                    child: gunban('도', Colors.purple, viewModel.soundIds[7]),
+                    child: gunban(
+                      '도',
+                      Colors.purple,
+                      onPress: () => viewModel.soundDo2(),
+                    ),
                   ),
                 ],
               );
@@ -72,11 +113,12 @@ class XylophoneScreen extends StatelessWidget {
     );
   }
 
-  Widget gunban(String text, Color color, int soundId) {
+  Widget gunban(String text, Color color, {Function()? onPress}) {
     return GestureDetector(
       onTap: () {
         //viewModel.pool.play(soundId);
-        viewModel.playSound(soundId);
+        //viewModel.playSound(soundId);
+        onPress?.call();
       },
       child: Container(
         width: 50,
