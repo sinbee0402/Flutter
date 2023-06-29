@@ -1,51 +1,29 @@
+import 'package:bmi_calculator/main/main_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
+  MainScreen({Key? key}) : super(key: key);
 
   @override
   State<MainScreen> createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
-  final _formKey = GlobalKey<FormState>();
-  final _heightController = TextEditingController();
-  final _weightController = TextEditingController();
+  final viewModel = MainViewModel();
 
   @override
   void initState() {
-    //생명주기 - 시작을 할 때
     super.initState();
-
-    load();
+    viewModel.load();
   }
 
   @override
   void dispose() {
-    //생명주기 - 종료가 될 때
-    _heightController.dispose();
-    _weightController.dispose();
+    viewModel.heightController.dispose();
+    viewModel.weightController.dispose();
     super.dispose();
-  }
-
-  Future save() async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setDouble('height', double.parse(_heightController.text));
-    await prefs.setDouble('weight', double.parse(_weightController.text));
-  }
-
-  Future load() async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    final double? height = prefs.getDouble('height');
-    final double? weight = prefs.getDouble('weight');
-
-    if (height != null && weight != null) {
-      _heightController.text = '$height';
-      _weightController.text = '$weight';
-      print('키 : $height, 몸무게 : $weight');
-    }
   }
 
   @override
@@ -60,12 +38,12 @@ class _MainScreenState extends State<MainScreen> {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Form(
-          key: _formKey,
+          key: viewModel.formKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               TextFormField(
-                controller: _heightController,
+                controller: viewModel.heightController,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: '키',
@@ -80,7 +58,7 @@ class _MainScreenState extends State<MainScreen> {
               ),
               const SizedBox(height: 8),
               TextFormField(
-                controller: _weightController,
+                controller: viewModel.weightController,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: '몸무게',
@@ -96,11 +74,11 @@ class _MainScreenState extends State<MainScreen> {
               const SizedBox(height: 8),
               ElevatedButton(
                 onPressed: () async {
-                  if (_formKey.currentState?.validate() == false) {
+                  if (viewModel.formKey.currentState?.validate() == false) {
                     return;
                   }
 
-                  save();
+                  viewModel.save();
 
                   // Navigator.push(
                   //   context,
@@ -112,12 +90,13 @@ class _MainScreenState extends State<MainScreen> {
                   //   ),
                   // );
 
+                  //얘네는 viewModel에 넣지 않는다. 넣으면 안티패턴
                   // Uri를 호출안하면 queryParameters 자체가 안나온다.
                   context.push(Uri(
                     path: '/main/result',
                     queryParameters: {
-                      'height': _heightController.text,
-                      'weight': _weightController.text,
+                      'height': viewModel.heightController.text,
+                      'weight': viewModel.weightController.text,
                     },
                   ).toString());
                 },
