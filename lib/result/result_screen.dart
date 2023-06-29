@@ -5,16 +5,15 @@ class ResultScreen extends StatelessWidget {
   final double height;
   final double weight;
 
-  ResultScreen({
+  const ResultScreen({
     Key? key,
     required this.height,
     required this.weight,
   }) : super(key: key);
 
-  final viewModel = ResultViewModel();
-
   @override
   Widget build(BuildContext context) {
+    final viewModel = ResultViewModel();
     final bmi = weight / ((height / 100.0) * (height / 100.0));
 
     return Scaffold(
